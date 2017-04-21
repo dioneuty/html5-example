@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<style>
+			#menu{
+				clear: both;
+			}
+			#menu>ul{
+				margin: 0px;
+				padding: 0px;
+			}
+			#menu>ul>li{
+				float: left;
+				width: 50px;
+				height: 40px;
+				background-color: red;
+				list-style: none;
+				margin-right: 5px;
+			}
+			#menu+div{
+				clear: both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<h1>한빛교육센터</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+			</ul>
+		</div>
+		<div id="content">
+			<h1>메뉴제어</h1>
+
+			<p>
+				<input type="text"/>
+				<button onclick="add();">메뉴추가</button>
+				<button onclick="del();">메뉴제거</button>
+			</p>
+
+		</div>
+		<!-- script위치가 head에 있으면 html태그가 다 생성되기 전에 자바스크립트 실행이 되어 버리므로 생성되지 않은 html태그를 호출해 버려서 undefined 에러가 날 수 있다. -->
+		<script lang="javascript">
+			// 앨리먼트 생성 -> <li>menu5</li>
+			var	add_li=document.createElement("li");
+			var msg=document.createTextNode("menu5");
+			add_li.appendChild(msg); 
+
+			// (document.createElement("li")).appendchild(document.createTextNode("menu5"));
+
+			//var html=document.childNodes[1];
+			// var body=document.childNodes[1].childNodes[2];
+			// var menu=document.childNodes[1].childNodes[2].childNodes[3];
+			// var ul=  document.childNodes[1].childNodes[2].childNodes[3].childNodes[1];
+
+			// var content=document.childNodes[1].childNodes[2].childNodes[5];
+			// var input=document.childNodes[1].childNodes[2].childNodes[5].childNodes[3].childNodes[1];
+
+			//firstChild, lastChild 
+			var html=document.lastChild;
+			var body=document.lastChild.lastChild;
+
+			//nextSibling, nextElementSibling
+			var menu=document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling;
+			var ul=  document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+
+			//parentNode
+			var content=document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.parentNode.nextSibling.nextSibling;
+			var input=document.childNodes[1].childNodes[2].childNodes[5].childNodes[3].childNodes[1];
+
+			var cnt=4;
+			var arr=new Array();
+			function add() {
+				console.log(input.value);
+				//cnt++;
+				var	add_li=document.createElement("li");
+				// var msg=document.createTextNode("menu"+cnt);
+				if(input.value==""){
+					cnt++;
+					var msg=document.createTextNode("menu"+cnt);
+				}else{
+					var msg=document.createTextNode("menu"+input.value);
+				}
+				add_li.appendChild(msg); 
+				ul.appendChild(add_li);
+				arr.push(add_li);
+				input_value="";
+			}
+
+			function del() {
+				//var lng=ul.childNodes.length;
+				var del_li=arr.pop();
+				ul.removeChild(del_li);
+			}
+
+		</script>
+	</body>
+</html>		

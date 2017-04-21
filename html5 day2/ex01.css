@@ -1,0 +1,23 @@
+body{
+    background-color: beige;
+}
+h1{
+    color:red;
+}
+h2{color:cadetblue;}
+#p1{color: chartreuse;}
+.cl1{color:brown;}
+p{color: aqua}
+
+/*
+지시자{속성:값}
+지시자{
+    속성:값;
+}
+지시자{속성:값;속성 값}
+지시자{속성(다중): 값1 값2 값3}
+
+css 지시자에 대한 적용
+인라인 방식>id>class>tag
+
+*/

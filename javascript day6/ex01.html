@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			// 10진수 10
+			var a=10;
+			// 8진수 10
+			var a2=012; 
+			// 16진수 10
+			var a3=0xa;
+			// 0.12 * 10의 3제곱(0.12*10^3=10*10*10) = 12
+			var a4=0.12e3;
+			// 12 * 10의 -제곱(12*10^-2=/10/10 0.01) = 0.12
+			var a5=12e-2;
+			var b=3.14;
+
+			var c='a';
+			var c1='abcd';
+			var c2='"abcd"';
+			// var c3=''abcd'';
+			var c4='"'+"abcd"+'"';
+			var c5='\"'+"abcd"+'\"';
+			var c6='\'abcd\'';
+			var c7='abc\n'; //개행도 하나의 문자로 인식
+			//var c8='abc'<abc>;
+
+			var d1=true;
+			var d2=false;
+			var d3=3>2;
+
+			var e1=null;
+			var e2;
+			e3=123;
+
+			document.write(a,'<br/>',a2,'<br/>',a3,'<br/>',a4,'<br/>',a5,'<br/>');
+			document.write(c1,'<br/>',c2,'<br/>',c4,'<br/>',c5,'<br/>',c6,'<br/>',c6.length,'<br/>',c7,'<br/>');
+
+			// document.write(c3);
+			document.write(d1,d2,d3,'<br/>');
+			document.write(d1+d2+d3,'<br/>');	
+
+			document.write(e1,'<br/>',e2,'<br/>',e3,'<br/>');	
+			//document.write(c8);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		var mypopup;
+
+		function func1() {
+			//window.open("http://www.naver.com/");
+			//window.open(주소,_blank||_self,부가옵션);
+			// 크기 조절된 팝업창 띄우기
+			mypopup = window.open("http://www.naver.com/", "_blank", "width=300, height=300, menubar=0, ,status=yes, toolbar=yes, resizable=yes,location=0");
+			// url,name,specs
+			// 출처: https://www.w3schools.com/jsref/met_win_open.asp
+		}
+
+		function func11() {
+			mypopup = window.open("./ex02.html/", "_blank");
+		}
+
+		function func12(argument) {
+			mypopup = window.open("ex02.html", "");
+		}
+
+		function func21() {
+			mypopup = window.open("ex02.html", "");
+			// body...
+		}
+
+		function func3_1() {
+			func1();
+			func11();
+		}
+
+		function func3() {
+			func1();
+			//window.setInterval(func3_1,1000);
+			mypopup = window.setTimeout(func3, 5000);
+		}
+
+		function func4() {
+			mypopup.moveBy(10, 10);
+			//이동(x,y);
+		}
+
+		function func41() {
+			//window.resizeBy(10,10);
+			//상대 크기 조절
+			mypopup.resizeTo(10, 10)
+			//절대 크기 조절
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<button onclick="func1();">팝업창 띄우기</button>
+	<button onclick="func12();">팝업창 띄우기</button>
+	<button onclick="func21();">팝업창 띄우기</button>
+	<button onclick="func3();">연속 팝업창 띄우기</button>
+	<button onclick="func4();">팝업창 옮기기</button>
+	<button onclick="func41();">팝업창 크기 조절</button>
+
+</body>
+
+</html>

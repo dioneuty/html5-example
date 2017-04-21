@@ -1,0 +1,4 @@
+$(":submit");
+[button, button, prevObject: n.fn.init(1), context: document, selector: ":submit"]
+$(":button");
+[button, button, button, prevObject: n.fn.init(1), context: document, selector: ":button"]

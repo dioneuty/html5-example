@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+</head>
+
+<body>
+	<div>
+		<button onclick="add();">add</button>
+		<button onclick="stop()">stop</button>
+	</div>
+	<div id="work"></div>
+	<script lang="javascript">
+		var cnt = 0;
+		var work = document.getElementById("work");
+		var img = document.createElement("img");
+		work.appendChild(img);
+		// for (var i = 1; i < 7; i++) {
+		// 	img=document.create;
+		// }
+		function add() {
+			if (cnt < 5) {
+				cnt++;
+			} else {
+				cnt = 0;
+			}
+			img.setAttribute("src", "./img/img0" + cnt + ".jpg")
+			console.log(img.attributes);
+		}
+
+		var img_loop = window.setInterval(add, 500);
+
+		function stop() {
+			window.clearInterval(img_loop);
+		}
+
+	</script>
+</body>
+
+</html>

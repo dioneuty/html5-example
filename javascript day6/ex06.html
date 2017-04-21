@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			//자바스크립트 숫자	→ Number형 (정수, 실수 모두 가능)
+			var a1=100;
+			var a2=new Number(3.23);//기본값: 0;
+
+			/*a1==a2 .equals	//값 비교 .equals , 같은 값		
+			alert(a1===a2);//주소값, 타입 비교; , 서로 다른 객체 */
+
+			//문자열(문자&문자열) 자료형→ String형 
+			var b1="문자열";
+			var b2=new String("문자열");
+			var b3=''; //빈 값(주의: null이 아님)
+	
+			// b2.length 문자의 길이
+			// b2.charAt(1) 문자 해당 인덱스에서의 문자 1개 추출
+			// b2.concat("추가") 해당 문자열 추가
+
+			// 참거짓 자료형→ Boolean형
+			var c1=false;
+			var c2=new Boolean(); //기본값: false;
+
+			// 자료형 확인
+			//instanceof('  ');
+			//typeof('  ');
+
+			/*JAVA의 배열
+			int[] arr1=new int[4];
+			int[] arr2=new int[]{1,2,3,4};
+			int[] arr3={1,2,3,4};*/
+
+			//JAVA SCRIPT의 배열
+			var d1=[13,24,3,54];
+			var d2=new Array(4);//!주의: 배열의 길이
+			d2[0]=13;
+			d2[1]=24;
+			d2[2]=3;
+			d2[3]=54;
+			var d3=new Array(13,24,3,54);//배열에 각각 들어갈 값들
+			var d4=new Array(13,'asdf',3,23);
+			//JAVA SCRIPT의 배열은 동적 배열
+			d4[4]=1234;
+			d4[6]='aaaa';
+			//아무 값도 없는 인덱스 값을 넣을 경우, undefined가 뜸.
+
+			/* 
+			오브젝트 
+			java map
+			*/
+			var g1={
+				'a':100, 
+				'b22222':1200, 
+				'11':'abc', 
+				'func4':function func04(){
+				document.write(g1.b22222+"g1.func04 실행");}
+			};
+			var g2=new Object();
+			g2['a']=100;
+			g2['b']=1200;
+			g2['11']='abc';
+			g2['1234']='zzzz';
+			g2.abc=1234;
+			g2[3]=222;
+
+			//g2.a g2.b g2.11 g2.1234
+			//g2={'a':100, 'b':1200, '11':'abc', 1234:'zzzz'};
+
+			window.a=100;
+			var b=200;
+			c=300;
+			//window.a==a, b==window.b
+			//window 최상위객체가 숨겨져 있다.
+
+			//window={a:100, b:200, a1:100, a2:3.23}
+
+			alert(window.a1);//주소값, 타입 비교; , 서로 다른 객체 
+			alert(window.g1.b);
+
+			//window={.... , g1:{ 'a' : 100, 'b':1200 }, ....}
+
+			/* function 자료형 */
+
+			function func1(){
+				document.write(a+"func1실행");
+			}
+			//익명함수
+			var func2=function (){
+				document.write("func2실행");
+			}
+			g2.func3=function(){
+				document.write("func3실행");
+			}
+			//window={.... , func2 : function(){document.write("func2실행")} , ...}
+			func1();
+			document.write('</br>');
+			var f=g1.func4();
+			f();
+			document.write('</br>');
+			window.func2();
+			document.write('</br>');
+			alert(typeof(func2));
+
+			d4[5]=function (){
+				document.write("d4[5]실행");
+			}
+			d4[5]();
+			document.write('</br>');
+			for(var i=0; i<d4.length;i++){
+				if(typeof(d4[i])=='function'){
+					d4[i]();
+				}else{
+					alert(d4[i]);
+				}
+			}
+			document.write('</br>');
+			g1.func4();
+			document.write('</br>');
+			var b1='abc';
+			var b2=new String();
+
+			window.String();
+			//window={...., String:function() {xxxxxx}, .........}
+
+			window.d4[6]='aaaa';
+
+			//window={...., d4:[13,24,3,54,1234,aaaa], ...... }
+
+			//JSON 개요
+			 student={ stu1:{'name':''.
+			 				'kor':'',
+			 				'eng':'',
+			 				'math':'',
+			 				},
+			 		    stu2:{'name':''.
+			 				'kor':'',
+			 				'eng':'',
+			 				'math':'',
+			 				}			
+			 		};
+
+			// student.stu1.name
+			// student.stu2.kor
+			
+			//함수와 메소드는 공존
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>			
+window={ a : function() { document.write(var b) };
+
+var foo={};
+foo={ a: function() {document.write(var b)} };
+foo.a=function() {document.write(var b)};
+
+window={ 
+		foo : { a: function() {document.write(var b)} } 
+		};
+
+객체.key = value;
+
+key = value;
+window.key= value;
+
+
+var a=function(){ document.write(var b); }
+
+window.a=function() {document.write(var b);

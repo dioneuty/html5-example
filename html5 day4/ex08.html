@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+	    <style>
+            @media print{
+                body{
+                    background-color: white;
+                }
+            }
+            @media screen and (max-width:480px){
+                /*핸드폰*/
+                body{
+                    background-color:yellow;
+                }
+            }
+            @media screen and (min-width:481px) and (max-width:1023px){
+/*                테블릿*/
+                body>ul{}
+                body>ul>li{
+                    width: 100px;
+                    height: 50px;
+                    display: inline-block;
+                    background-color: red;
+                }
+                
+            }
+            @media screen and (min-width:1024px) and (max-width:2047px){
+                /* pc*/    
+                body{
+                    background-color: darkgrey;
+                }
+                body>ul>li{
+                    width: 100px;
+                    height: 50px;
+                    display: inline-block;
+                    background-color: red;
+                }
+                h1{
+                    text-align: center;
+                    color:red;
+                }
+                h2{
+                    
+                    color: blue;
+                }
+              
+            }
+            @media screen and (min-width:2048px){
+                /* pc*/    
+                body{
+                    background-color: azure;
+                }
+                body>ul>li{
+                    width: 100px;
+                    height: 50px;
+                    display: inline-block;
+                    background-color: red;
+                }
+                h1{
+                    text-align: center;
+                    color:red;
+                }
+                h2{
+                    
+                    color: blue;
+                }
+            }
+            
+            h1{
+                color:red;
+            }
+            h2{
+                color: blue;
+            }
+            
+            @media screen{
+                body{
+                background-color: oldlace;
+                }    
+                h1{
+                    text-align: center;
+                    font-size: 3em;
+                }
+            }
+            
+            
+        </style>
+	</head>
+
+	<body>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+        </ul>
+        <h1>대제목</h1>
+        
+        <h2>소제목1</h2>
+        <p>내용1</p>        
+        <h2>소제목2</h2>
+        <p>내용2</p>        
+        <h2>소제목3</h2>
+        <p>내용3</p>
+	</body>
+</html>

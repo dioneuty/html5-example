@@ -1,0 +1,14 @@
+$('button');
+	[button, button, button, button, prevObject: n.fn.init(1), context: document, selector: "button"]
+$('button').first();
+[button, prevObject: n.fn.init(4), context: document]
+$('button').first().next();
+[button, prevObject: n.fn.init(1), context: document]
+$('button').first().nextAll();
+	[button, button, button, div#field, prevObject: n.fn.init(1), context: document]
+$('button').first().nextAll().eq(3);
+	 [div#field, prevObject: n.fn.init(4), context: document]
+$('button').first().nextAll().eq(3);
+	  [div#field, prevObject: n.fn.init(4), context: document]
+$('button').first().nextAll('div');
+[div#field, prevObject: n.fn.init(1), context: document]

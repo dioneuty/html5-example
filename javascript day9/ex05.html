@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		var div_img, prv, nxt;
+		var cnt = 0;
+		var cnt1 = 1;
+		var cnt2 = 2;
+		var max = 8;
+		var min = 0;
+		window.onload = function() {
+			div_img = document.querySelector('#img');
+
+			var tmpVal = '<img id="big" src="img/big_img0' + cnt1 + '.jpg" />';
+			tmpVal += '<img src="img/img0' + cnt + '.jpg" /><img src="img/img0' + cnt1 + '.jpg" /><img src="img/img0' + cnt2 + '.jpg" />'
+
+			div_img.innerHTML = tmpVal;
+			prv = document.querySelectorAll('#content a')[0];
+			nxt = document.querySelectorAll('#content a')[1];
+			nxt.onclick = function() {
+				//780, 801,
+				cnt++, cnt1++, cnt2++;
+				//if(cnt2<8){cnt++,cnt1++,cnt2++;}
+				if (cnt2 > max) {
+					cnt = max - 1, cnt1 = max, cnt2 = min;
+				}
+				if (cnt1 > max) {
+					cnt = max, cnt1 = min, cnt2 = min + 1;
+				}
+				if (cnt > max) {
+					cnt = min, cnt1 = min + 1, cnt2 = min + 2;
+				}
+				//else cnt2=0;
+				//                    alert("next");
+				var tmpVal = '<img id="big" src="img/big_img0' + cnt1 + '.jpg" />';
+
+				tmpVal += '<img src="img/img0' + cnt + '.jpg" /><img src="img/img0' + cnt1 + '.jpg" /><img src="img/img0' + cnt2 + '.jpg" />'
+
+				div_img.innerHTML = tmpVal;
+				return false;
+				//true인 경우 다른 주소로 넘어가버려서 기능을 끄기 위해 false로 설정했다.
+				//true인 경우 다른 주소로 넘어가버려서 기능을 끄기 위해 false로 설정했다.
+			}
+			prv.onclick = function() {
+				//780 801 012  
+				cnt--, cnt1--, cnt2--;
+				//if(cnt>0){cnt--,cnt1--,cnt2--;}
+				if (cnt < min) {
+					cnt = max, cnt1 = min, cnt2 = min + 1;
+				}
+				if (cnt1 < min) {
+					cnt = max - 1, cnt1 = max, cnt2 = min;
+				}
+				if (cnt2 < min) {
+					cnt = max - 2, cnt1 = max - 1, cnt2 = max;
+				}
+				//                    alert("prev");
+				var tmpVal = '<img id="big" src="img/big_img0' + cnt1 + '.jpg" />';
+
+				tmpVal += '<img src="img/img0' + cnt + '.jpg" /><img src="img/img0' + cnt1 + '.jpg" /><img src="img/img0' + cnt2 + '.jpg" />'
+
+				div_img.innerHTML = tmpVal;
+				return false;
+			}
+			var div1 = document.querySelectorAll('#content>div>a');
+			div1[0].style.backgroundColor = 'blue';
+			div1[1].style.backgroundColor = 'blue';
+		};
+
+	</script>
+	<style>
+		/*   #content>div{
+                background-color: red;
+                width: 136px;
+                height: 136px;
+                display: inline-block;
+                margin: 0px auto;
+                
+                position: relative;
+            }*/
+		
+		#content>div {
+			left: 200px;
+			position: relative;
+		}
+		
+		#content>div>#img>not(#big) {
+			background-color: blue;
+			width: 500px;
+			height: 500px;
+			position: relative;
+			display: inline-block;
+		}
+		
+		#content>div>#img>#big {
+			top: 0px;
+			left: 50px;
+			display: block;
+			position: relative;
+			border: 1px solid black;
+		}
+		
+		#content>div>a {
+			width: 35px;
+			height: 20px;
+			/*                background-color: red;*/
+			display: inline-block;
+			position: absolute;
+			top: 350px;
+			text-indent: -9999px;
+			border-radius: 10px;
+			/*부모의 위치가 relative으로 인해 0,0이 됨, 종속됨*/
+		}
+		
+		#content>div>a:last-child {
+			left: 500px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>한빛교육센터</h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div>
+			<div id="img"></div>
+			<a href="#">prev</a>
+			<a href="#">next</a>
+		</div>
+	</div>
+	<div id="footer">
+		<p>ⓒ hanbit Corp.</p>
+	</div>
+</body>
+
+</html>

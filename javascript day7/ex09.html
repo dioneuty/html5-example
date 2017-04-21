@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			
+			//window 객체
+			function func1() {
+				var d=new Date();		
+				document.write(d);
+				document.write('<button onclick="func2();">스톱</button>');
+				//재귀함수
+				var ival2=window.setTimeout(func1,1000);	
+			}
+			// setInterval(인자, 시간(밀리세컨드)) 1s=1000ms
+			//setInterval 계속 반복해서 실행
+			//var ival=window.setInterval(func1,1000);
+
+			//setTimeOut 해당 시간까지만 실행하고 멈춤
+			var ival2=window.setTimeout(func1,1000);
+			
+			function func2(){
+				//clearInterval(ival);
+				clearTimeout(ival2);
+			}
+
+			//screen 객체
+			
+
+
+		</script>
+		
+	</head>
+	<body>	
+	</body>
+</html>		

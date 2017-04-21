@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		/*	//단독 함수 정의:세미콜론이 없음
+					function func1() {
+						return 100;
+					}
+					document.write(func1());
+		*/
+		//함수 정의 후 참조변수에 대입: 세미콜론이 필수
+		var func2 = function() {
+			document.write('func2 run');
+		};
+		func2();
+
+		///////////////////////////////////////////////
+
+
+		//익명함수
+		(function() {
+			document.write('익명함수 실행');
+		})();
+
+		//메소드
+		//this: obj 객체, 자기 자신
+		var obj = {
+			'a1': '100',
+			'a2': 'ab',
+			'a3': function() {
+				alert('obj의 a3의 실행' + this.a2 + this);
+			},
+			'a4': 1234 'a5': func2
+		};
+		obj.a3();
+
+		var obj2 = {
+			'a1': 222,
+			'a3': func2
+		};
+
+		obj2.a3();
+
+		var arr1 = [111, func2];
+		arr1[1]();
+
+		///////////////////////////////////////////////
+
+
+		var arr2 = [211, 211, 223];
+		var arr3 = [function() {
+			document.write("as", '</br>');
+		}, 323];
+
+		function fun2(a) {
+			document.write(a, '</br>');
+		}
+		fun2('abc');
+
+		fun2({
+			a: 1
+		});
+		fun2(arr2);
+
+		var obj3 = {
+			'a1': 4444,
+			'a2': [4, 3, 2],
+			'a3': {
+				'b1': "aa"
+			}
+		};
+
+		function fun3(a) {
+			document.write('-------------</br>');
+			document.write(a + '의 fun3함수 실행 </br>');
+			for (var b in a) {
+				if (typeof(a[b]) == 'function') {
+					a[b]();
+				} else {
+					document.write(b, '</br>');
+					document.write(a + '의' + b + '인덱스: ', a[b], '</br>');
+					document.write(typeof(a[b]), '</br>');
+				}
+			}
+			document.write('-------------</br>');
+		}
+		fun3(arr2);
+		fun3(arr3);
+		fun3(obj3);
+
+		function fun4(a) {
+			a();
+		}
+
+		fun4(fun3(arr2));
+
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

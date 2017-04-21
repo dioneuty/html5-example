@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script typte="text/javascript"></script>
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script src="js/jquery.bxslider.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var env = {
+			minSlides: 3,
+			maxSlides: 3,
+			slideWidth: 136,
+			moveSlides: 1,
+			onSliderLoad: function() {
+				alert('load');
+				$('#content>div').css('width', $('.bx-viewport').width());
+				$('#content>div>img').css('width', $('.bx-viewport').width());
+			},
+			onSlideBefore: function($slideElement, oldIndex, newIndex) {
+				//alert('before' + oldIndex + newIndex);
+			},
+			onSlideAfter: function(ele, oldIndex, newIndex) {
+				//alert('after' + oldIndex + newIndex);
+				//$('.bxslider li img').eq(newIndex);
+				var imgname = $(ele).children('img').attr('src');
+				imgname = imgname.replace('imgs/img', ''); //imgs/img01.jpg -> 01.jpg
+				//alert(imgname);
+				$('#content>div>img').attr('src', 'imgs/big' + imgname);
+			},
+			onSlideNext: function() {
+				alert('next');
+			},
+			onSlidePrev: function() {
+				alert('prev');
+			}
+		}
+		$('document').ready(function() {
+			$('.bxslider').bxSlider(env).goToSlide(3); //on end
+
+			alert($('.bx-viewport').width());
+			/*$('#content>div').css('width', $('.bx-viewport').width());
+			$('#content>div>img').css('width', $('.bx-viewport').width());*/
+		}); //ready end
+
+	</script>
+</head>
+
+<body>
+	<div id="header">한빛교육센터</div>
+	<div id="menu">
+		<a href="#">menu1</a>
+		<a href="#">menu2</a>
+		<a href="#">menu3</a>
+		<a href="#">menu4</a>
+		<div id="content">
+			<div>
+				<img src="imgs/big01.jpg">
+				<ul class="bxslider">
+					<li>
+						<img src="imgs/img01.jpg">
+					</li>
+					<li>
+						<img src="imgs/img02.jpg">
+					</li>
+					<li>
+						<img src="imgs/img03.jpg">
+					</li>
+					<li>
+						<img src="imgs/img04.jpg">
+					</li>
+					<li>
+						<img src="imgs/img05.jpg">
+					</li>
+					<li>
+						<img src="imgs/img06.jpg">
+					</li>
+					<li>
+						<img src="imgs/img07.jpg">
+					</li>
+					<li>
+						<img src="imgs/img08.jpg">
+					</li>
+				</ul>
+			</div>
+			<h2>제목</h2>
+			<p>내용</p>
+		</div>
+		<div id="footer">
+			<p>한빛교육센터</p>
+		</div>
+	</div>
+</body>
+
+</html>

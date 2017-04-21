@@ -1,0 +1,66 @@
+ex06.html:14 hello javascript
+ex06.html:15 text has been made by some javascript codes
+document.childNodes;
+    (2) [<!DOCTYPE html>, html]
+document.childNodes[1].childNodes[2].childNodes[0];
+    #text
+document.childNodes[1].childNodes[2];
+    <body>​…​</body>​
+document.childNodes[1].childNodes[2].childNodes[1].childNodes;
+    [text]length: 10: text__proto__: NodeList
+var msg=document.createTextNode("추가");
+    undefined
+document.childNodes[1].childNodes[2].childNodes[1].childNodes[0];
+    "제목"
+document.childNodes[1].childNodes[2].childNodes[1];
+    <h1>​제목​</h1>​
+document.childNodes[1].childNodes[2].childNodes[1].appendChild(msg);
+    "추가"
+var msg2=document.createTextNode("이것은 내용입니다");
+    undefined
+document.childNodes[1].childNodes[2];
+    <body>​…​</body>​
+var p=document.createElement('p');
+    undefined
+document.childNodes[1].childNodes[2].appendChild(p);
+    <p>​</p>​
+document.childNodes[1].childNodes[2];
+    <body>​<h1>​…​</h1>​<p>​</p>​</body>​
+document.childNodes[1].childNodes[2].childNodes;
+    (4) [text, h1, text, p]
+document.childNodes[1].childNodes[2].childNodes[3];
+    <p>​</p>​
+document.childNodes[1].childNodes[2].childNodes[3].appendChild(msg2);
+    "이것은 내용입니다"
+document.childNodes[1].childNodes[2].childNodes[3];
+    <p>​이것은 내용입니다​</p>​
+document.childNodes[1].childNodes[2].childNodes[3].removeChild;
+    function removeChild() { [native code] }
+document.childNodes[1].childNodes[2].childNodes[3].childNodes;
+    [text]
+document.childNodes[1].childNodes[2].childNodes[3].removeChild(msg2;
+VM1947:1 Uncaught SyntaxError: missing ) after argument list
+document.childNodes[1].childNodes[2].childNodes[3].removeChild(msg2);
+"이것은 내용입니다"
+document.childNodes[1].childNodes[2].removeChild(p);
+<p>​</p>​
+document.childNodes[1].childNodes[2].childNodes;
+(3) [text, h1, text]length: 30: text1: h12: text__proto__: NodeList
+document.childNodes[1].childNodes;
+(3) [head, text, body]length: 30: head1: text2: body__proto__: NodeList
+document.childNodes[1].replaceChild(p,document.childNodes[1].childNodes[2].childNodes[1]);
+VM2440:1 Uncaught DOMException: Failed to execute 'replaceChild' on 'Node': The node to be replaced is not a child of this node.
+    at <anonymous>:1:24
+(anonymous) @ VM2440:1
+document.childNodes[1].childNodes[2].replaceChild(p,document.childNodes[1].childNodes[2].childNodes[1]);
+<h1>​…​</h1>​
+document.childNodes[1].childNodes[2];
+<body>​<p>​</p>​</body>​
+document.childNodes[1].childNodes[2].childNodes[1];
+<p>​</p>​
+document.childNodes[1].childNodes[2].childNodes[1].childNodes;
+[]length: 0__proto__: NodeList
+document.childNodes[1].childNodes[2].childNodes;
+(3) [text, p, text]length: 30: text1: p2: text__proto__: NodeList
+document.childNodes[1].childNodes[2].childNodes[1].appendChild(msg2);
+"이것은 내용입니다"

@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<style>
+		#menu {
+			clear: both;
+		}
+		
+		#menu>ul {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		#menu>ul>li {
+			float: left;
+			width: 50px;
+			height: 40px;
+			background-color: red;
+			list-style: none;
+			margin-right: 5px;
+		}
+		
+		#menu+div {
+			clear: both;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="header">
+		<h1>한빛교육센터</h1>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="mn1">menu1</li>
+			<li class="mn1">menu2</li>
+			<li class="mn1">menu3</li>
+			<li class="mn1">menu4</li>
+		</ul>
+	</div>
+	<div id="content">
+		<h1>메뉴제어</h1>
+
+		<p>
+			<input type="text" />
+			<button onclick="add();">메뉴추가</button>
+			<button onclick="del();">메뉴제거</button>
+		</p>
+
+	</div>
+	<!-- script위치가 head에 있으면 html태그가 다 생성되기 전에 자바스크립트 실행이 되어 버리므로 생성되지 않은 html태그를 호출해 버려서 undefined 에러가 날 수 있다. -->
+	<!-- elements: 배열 리턴, -->
+	<script lang="javascript">
+		var menu = document.getElementById("menu");
+		var ul = document.getElementsByTagName("ul")[0];
+		var content = document.getElementById("content");
+
+		function add() {
+			var msg = document.getElementsByTagName("input")[0].value;
+			if (msg != "") {
+				var li = document.createElement("li");
+				var txt = document.createTextNode(msg);
+				li.appendChild(txt);
+
+				ul.appendChild(li);
+				document.getElementsByTagName("input")[0].value = "";
+			}
+		}
+
+		function del() {
+			var del_li = document.getElementsByTagName("li");
+			var li_last_idx = del_li.length - 1;
+			ul.removeChild(del_li[li_last_idx]);
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+var menu=document.getElementById('menu');
+	undefined
+	menu
+	<div id=​"menu">​…​</div>​<ol>​…​</ol>​</div>​
+var ul=document.getElementsByTagName('ul');
+	undefined
+	ul
+	[ul]
+var lis=ul[0].innerHTML;
+	undefined
+lis+='<li>menu5</li>';
+"
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				
+			<li>menu5</li><li>menu5</li>"
+ul[0].innerHTML=lis;
+"
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				
+			<li>menu5</li><li>menu5</li>"
+ul[0].outerHTML;
+"<ul>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				
+			<li>menu5</li><li>menu5</li></ul>"
+ul[0].out
+	undefined
+ul[0].outerText;
+	"menu1
+	menu2
+	menu3
+	menu4
+	menu5
+	menu5"
+ul[0].innerHTML;
+"
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				
+			<li>menu5</li><li>menu5</li>"
+ul[0].outerHTML='<ol>'+ul[0].innerHTML+'</ol>';
+	"<ol>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				
+			<li>menu5</li><li>menu5</li></ol>"
+document.getElementById('menu');
+	<div id=​"menu">​…​</div>​
+document.querySelector('#menu');
+	<div id=​"menu">​…​</div>​
+document.querySelector('li');
+	<li>​menu1​</li>​
+document.querySelectorAll('li');
+	[li, li, li, li, li, li]
+document.querySelector('ol');
+	<ol>​…​</ol>​
+
+
+document.querySelectorAll('.mn1');
+	[li.mn1, li.mn1]length: 20: li.mn11: li.mn1__proto__: NodeList
+document.querySelectorAll('.mn1:nth-child(1)');
+	[li.mn1]length: 10: li.mn1__proto__: NodeList
+document.querySelectorAll('.mn1:nth-child(2)');
+	[]
+document.querySelectorAll('.mn1:nth-child(0)');
+	[]
+document.querySelectorAll('.mn1:nth-child(2)');
+	[]
+document.querySelectorAll('.mn1:nth-child(3)');
+	[li.mn1]
+document.querySelectorAll('.mn1:nth-child(1)');
+	[li.mn1]
+document.querySelectorAll('li~li');
+	[li, li.mn1, li]
+document.querySelector('li~li');
+	<li>​menu2​</li>​

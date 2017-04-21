@@ -1,0 +1,179 @@
+<!doctype html>
+
+<html>
+   <head>
+      <title>그리드</title>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="css/960.css"/>
+      <style>
+          @media screen and (max-width:480px){
+                   body,body>*{
+                  background-color: aliceblue;
+              }
+              .container_12{
+                  width: auto;
+              }
+              .container_12>div{
+                    border-style: dotted;
+                    border-color: red;
+                    border-width: 1px;
+                    width:480px;
+                  
+                }
+              #header{
+                  background-image: url(imgs/daum.png);
+                  background-repeat: no-repeat;
+              }
+              #header>h1{
+                  text-align: center;
+              }
+              #menu{
+                  position: relative;
+                  width:50%;
+                 
+                  box-sizing: border-box;
+                  background-color: brown;
+              }
+              #menu ul{
+                  width:480px;
+                  float: left;
+                  padding-left: 40%;
+                  overflow: hidden;
+                  color: white;
+              }
+              #menu>ul>li{
+                  width: 0%;
+                  list-style: none;
+              }
+              #content{
+
+              }
+              #aside{
+                  width: 500px;
+                  height: 100px;
+              }
+              #footer{
+                  background-color: gray;
+              }
+          }
+          
+          @media screen and (min-width:481px) and (max-width:959px){
+                    body,body>*{
+                  background-color: aliceblue;
+                margin: 0px auto;
+              }
+              .container_12>div{
+                    width:0px;
+                    border-style: dotted;
+                    border-color: red;
+                    border-width: 1px;
+                }
+              #header{
+                  width:auto;
+                  background-image: url(imgs/daum.png);
+                  background-repeat: no-repeat;
+              }
+              #header>h1{
+                  text-align: center;
+              }
+              #menu{
+                  background-color: brown;
+              }
+              #menu ul{
+                  padding-left: 20%;
+                  overflow: hidden;
+                  color: white;
+              }
+              #menu>ul>li{
+                  float: left;
+                  width: 24%;
+                  list-style: none;
+              }
+              #content{
+
+              }
+              #aside{
+                  height: 100px;
+              }
+              #footer{
+                  background-color: gray;
+              }
+          }
+          @media screen and (min-width:960px){
+                  body,body>*{
+                  background-color: aliceblue;
+              }
+              .container_12>div{
+                    width: 960px;
+                    border-style: dotted;
+                    border-color: red;
+                    border-width: 1px;
+                    box-sizing: border-box;
+                }
+              #header{
+                  background-image: url(imgs/daum.png);
+                  background-repeat: no-repeat;
+              }
+              #header>h1{
+                  text-align: center;
+              }
+              #menu{
+                  width:100%;
+                  box-sizing: border-box;
+                  background-color: brown;
+              }
+              #menu ul{
+                  padding-left: 20%;
+                  overflow: hidden;
+                  color: white;
+              }
+              #menu>ul>li{
+                  width: 24%;
+                  float: left;
+                  list-style: none;
+              }
+              #content{
+
+              }
+              #aside{
+                  height: 100px;
+              }
+              #footer{
+                  background-color: gray;
+              }
+          }      
+        
+        </style>
+
+   </head>
+    
+   <body>
+        <div class="container_12">
+          
+            <div id="header" class="grid_12">
+                <h1>한빛교육센터</h1>
+            </div>    
+         
+            <div id="menu" class="grid_12">
+             <ul>
+                 <li>menu1</li>
+                 <li>menu2</li>
+                 <li>menu3</li>
+                 <li>menu4</li>
+             </ul>
+            </div> 
+             
+            <div id="content" class="grid_9">
+                <h1>제목</h1>
+                <p>내용</p>
+            </div>
+            
+            <div id="aside" class="grid_3">광고</div>
+            
+            <div id="footer" class="grid_12">
+                footer
+            </div> 
+                            
+        </div>
+   </body>
+</html>

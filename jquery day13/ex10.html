@@ -1,0 +1,39 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            //window.onload=function(){};
+            
+            /*$(window).load(function(){
+//                페이지 모두 로딩 후 실행
+                var h1=$('h1');
+                alert('load '+h1);
+            });*/
+            
+            //window.document
+            $(document).ready(function(){
+//               엘리먼트 로딩 후 실행
+                //문서의 구조만 완성되면 바로 실행
+                var h1=$('h1');
+                alert('load '+h1);
+                //jquery식 이벤트 리스너
+                $('button').click(function(){
+                    var msg=$('input').val();
+                    h1.text(msg);
+                });
+            });
+            
+        </script>
+	</head>
+
+	<body>
+        <h1>ex10</h1>
+        <input type="text" name="" id="">
+        <button>제목수정</button>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			//반복문
+			/*for(i=0; i<5; i++){
+				document.write("<h1>i=");
+				document.write(i);
+				document.write("</h1>");
+			}	
+			var a=0;
+			while(a<5){
+				document.write("<h1>a=");
+				document.write(a);
+				document.write("</h1>");
+				a++;
+			}
+			var x=0;
+			do{
+				document.write("<h1>x=");
+				document.write(x);
+				document.write("</h1>");
+				x++;
+			}while(x<5);*/
+
+			var sum=0;
+			for(i=1;i<10;i+=2){
+				document.write(i,'+');
+				sum+=i;
+			}
+			document.write("=",sum);
+			
+			var c=1;
+			var tot=0;
+			var msg='';
+			while(c<10){
+				if(c>1){
+					msg+='+';
+				}
+				tot+=c;
+				msg+=c;
+				c+=2;
+			}
+			msg+='='+tot;
+			document.write("<h1>"+msg+"</h1>");
+			
+			document.write('<table>');
+			for(i=2;i<10;i++){
+				document.write('<th>');
+				document.write(i,'단');
+				document.write('</th>');
+			}
+			for(su=1;su<10;su++){
+				document.write('<tr>');
+				for(dan=2;dan<10;dan++){
+					document.write('<td>');
+					document.write(dan,"*",su,"=",dan*su);
+					document.write('</td>');
+				}
+				document.write('</tr>');
+			}
+			document.write('</table>');
+			//함수
+			//form 사례
+
+		</script>
+		<style>
+			table>td,table>tr{
+				width: 80%;
+				border-style: 1px gray solid;
+			}
+			tr:nth-child(2n){
+				background-color: magenta;
+			}
+		/* 2n=even */
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>				

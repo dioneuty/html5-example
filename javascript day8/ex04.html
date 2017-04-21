@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		//BOM-Screen 객체
+		var msg = "";
+		msg += "수평 해상도:" + screen.width;
+		msg += "\n";
+		msg += "수직 해상도:" + screen.height;
+		msg += "\n";
+		//작업표시줄 제외 해상도(익스플로러만 가동)
+		msg += "수평 해상도:" + screen.availWidth;
+		msg += "\n";
+		msg += "수직 해상도:" + screen.availHeight;
+		msg += "\n";
+		alert(msg);
+
+		function forward() {
+			// history.forward();
+			history.go(1);
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<a href="ex05.html">ex05.html</a>
+	<button onclick="forward()">앞으로</button></br>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+</head>
+<style>
+    nav{
+        background-color: pink;
+    }
+    nav>ul{
+        height: 50px;
+        position: relative;
+    }    
+    nav>ul>li{
+        list-style: none;
+        display: inline-block;
+    }
+    nav>ul>li>a{
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: red;
+    }
+    nav>ul>li:nth-child(2)>ul{
+        visibility: none;
+    }
+    nav>ul>li>ul>li{
+        list-style: none;
+    }
+    nav>ul>li:nth-child(2)>ul{
+        visibility: visible;
+        position: relative;
+        width: 100px;
+        height: 200px;
+    }
+</style>
+<body>
+    <header>
+        <h2>logo</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a>
+                <ul>
+                    <li>menu2-1</li>
+                    <li>menu2-2</li>
+                    <li>menu2-3</li>
+                    <li>menu2-4</li>
+                </ul>
+            </li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h1>제목</h1>
+        <p>내용</p>
+    </section>
+    <footer>
+        <p>copyright 2017 한빛교육센터</p>
+    </footer>
+</body>
+</html>

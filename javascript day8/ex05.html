@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		// BOM-history 객체
+		//https://www.w3schools.com/jsref/obj_history.asp//
+		function func01() {
+			// history.back();
+			history.go(-1);
+		}
+
+		function func02() {
+			// history.forward();
+			history.go(1);
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<button onclick="func01();">뒤로</button>
+	<button onclick="func02();">앞으로</button>
+</body>
+
+</html>

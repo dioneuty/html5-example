@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		#banner {
+			margin: 0px auto;
+			width: 320px;
+			position: relative;
+		}
+		
+		#banner>img {
+			border: solid gray 3px;
+		}
+		
+		#banner>a {
+			width: 55px;
+			height: 55px;
+			display: inline-block;
+			text-indent: -9999px;
+			position: absolute;
+			top: 150px;
+		}
+		
+		#banner>a:nth-child(2) {
+			background-image: url(imgs/arrow-left.png);
+			left: -58px;
+		}
+		
+		#banner>a:nth-child(3) {
+			background-image: url(imgs/arrow-1.png);
+			left: 326px;
+		}
+
+	</style>
+
+	<script lang="javascript">
+		//window.addEventListener('load',function(){});
+		//브라우저의 호환성을 위해 window.onload를 사용하기로 함
+		var banner, img, atag, url;
+		var imgs = ['big_img00.jpg', 'big_img01.jpg', 'big_img02.jpg', 'big_img03.jpg', 'big_img04.jpg', 'big_img05.jpg', 'big_img06.jpg', 'big_img07.jpg', 'big_img08.jpg'];
+		var cnt = -1;
+		var previmg = function(event) {
+			event.preventDefault();
+			// cnt--;
+			if (cnt < 1) {
+				cnt = imgs.length;
+			}
+			url = "imgs/" + imgs[--cnt];
+			img.setAttribute('src', url);
+		}
+		var nextimg = function(event) {
+			if (event) event.preventDefault();
+			// if(cnt<imgs.length+1);
+			if (cnt >= imgs.length - 1) {
+				cnt = -1;
+			}
+			url = "imgs/" + imgs[++cnt];
+
+			// alert(cnt);
+			img.setAttribute('src', url);
+			// return false;
+		};
+		var nxt = function() {
+			var event = document.createEvent('HTMLEvents');
+			event.initEvent('click', true, false);
+			atag[1].dispatchEvent(event);
+		};
+		window.onload = function() {
+			banner = document.querySelector('#banner');
+			img = banner.querySelector('img');
+			atag = banner.querySelectorAll('a');
+			atag[0].addEventListener('click', previmg);
+			atag[1].addEventListener('click', nextimg);
+			//window.setInterval(nextimg,3000);
+			window.setInterval(nxt, 3000);
+
+			//atag[1].onclick();
+		};
+
+	</script>
+
+</head>
+
+<body>
+	<div>
+		<div id="banner">
+			<img src="imgs/big_img00.jpg" alt="img">
+			<a href="#">prev</a>
+			<a href="#">next</a>
+		</div>
+	</div>
+</body>
+
+</html>

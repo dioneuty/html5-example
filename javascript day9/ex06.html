@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		var ul;
+		window.onload = function() {
+			ul = document.querySelector('ul');
+			// 자바스크립트를 이용한 css 설정
+			//ul.style.backgroundColor='red';
+			li = document.querySelectorAll('li');
+			li[0].style.display = 'inline-block';
+			li[0].style.backgroundColor = 'rgb(' + 0 + ',0,0)';
+			//css: background-color:
+			//javascript: style.backgroundColor
+			li[1].style.display = 'inline-block';
+			li[1].style.fontSize = '20pt';
+			//javascript.style에서는 글자 크기 뒤에 단위가 꼭 들어간다. 
+			li[1].style.color = 'blue';
+			li[2].style.display = 'inline-block';
+			li[2].style.color = 'rgb(132,33,65)';
+			li[3].style.display = 'inline-block';
+			li[3].style.color = 'rgb(132,33,65)';
+
+
+		};
+
+	</script>
+	<style>
+
+
+	</style>
+</head>
+
+<body>
+	<ul>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+	</ul>
+</body>
+
+</html>

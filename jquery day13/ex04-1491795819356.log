@@ -1,0 +1,29 @@
+k$(":text");
+    [input#id, prevObject: n.fn.init(1), context: document, selector: ":text"]
+$(":text").text();
+    ""
+$(":text").val();
+    "efwefwe"
+$(":password");
+$(":password").val();
+$(":selected");
+$(":selected").val();
+     "sel3"
+$(":selected").val();
+    "sel3"
+$(":checked").val();
+    "on"
+$(":checkbox");
+    [input#hobby1, input#hobby2, input#hobby3, prevObject: n.fn.init(1), context: document, selector: ":checkbox"]
+$(":checkbox:eq(0)");
+    [input#hobby1, prevObject: n.fn.init(1), context: document, selector: ":checkbox:eq(0)"]
+$(":checkbox:eq(0):checked");
+    [prevObject: n.fn.init(1), context: document, selector: ":checkbox:eq(0):checked"]
+$(":checkbox:eq(1):checked");
+    [input#hobby2, prevObject: n.fn.init(1), context: document, selector: ":checkbox:eq(1):checked"]
+$(":checkbox:checked");
+    [input#hobby2, prevObject: n.fn.init(1), context: document, selector: ":checkbox:checked"]0: input#hobby2context: documentlength: 1prevObject: n.fn.init(1)selector: ":checkbox:checked"__proto__: Object(0)
+$(":checkbox:eq(2):checked");
+    [prevObject: n.fn.init(1), context: document, selector: ":checkbox:eq(2):checked"]
+$(":checkbox:checked").val();
+    "on"

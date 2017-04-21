@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+        <style>
+            .col1{
+                background-color: aquamarine;
+            }
+            .col2{
+                color: blueviolet;
+                background-color: darkgrey;
+            }
+            .col3{
+                background-color: chartreuse;
+            } 
+            .col4{
+                background-color: chocolate;
+            }
+            #addId{
+                background-color: fuchsia;
+            }
+        </style>
+		<script type="text/javascript">
+			window.onload=function(){
+                
+				var ul=$('#content').children(':first').next();
+                ul.children(':first').css('backgroundColor','blue');
+                //addClass(); 클래스 추가
+                ul.children(':first').addClass('col1');
+                ul.children(':first').addClass('col1').next().next().next().addClass('col1').prev().prev().prev().removeClass('col1');
+                ul.children(':first').next().addClass('col1').children(':first').addClass('col2');
+                
+                ul.children(':first').next().next().addClass('col1').children(':first').addClass('col2').parent().next().next().addClass('col3');
+                
+                //toggleClass(); 1번 활성화, 2번 비활성화
+                ul.children(':first').next().next().addClass('col1').children(':first').addClass('col2').parent().next().toggleClass('col4').toggleClass('col4');
+                
+                //attr(key:value) 속성 이름과 속성 값을 이용하여 클래스를 추가
+                ul.children(':last').attr('class','col3');
+                ul.children(':nth-child(11)').attr('id','addId');
+                //attr()를 이용하여 주소를 변환하기
+                ul.children(':nth-child(11)').attr('id','addId').children(':first').attr('href','http://www.naver.com/');
+                
+                //attr()를 이용하여 자식들의 속성값 불러내기
+                alert(ul.children(':nth-child(11)').attr('id'));
+                alert(ul.children(':nth-child(11)').children(':first').attr('href'));
+                alert(ul.children(':eq(3)').children(':first').attr('class'));
+                
+			};
+        </script>
+	</head>
+		<div id="content">
+			<h1>목차</h1>
+            <ul>
+                <li><a href="#">서론</a></li>
+                <li><a href="#">내용1</a></li>
+                <li><a href="#">내용2</a></li>
+                <li><a href="#">내용3</a></li>
+                <li><a href="#">내용4</a></li>
+                <li><a href="#">내용5</a></li>
+                <li><a href="#">내용6</a></li>
+                <li><a href="#">내용7</a></li>
+                <li><a href="#">내용8</a></li>
+                <li><a href="#">내용9</a></li>
+                <li><a href="#">내용10</a></li>
+                <li><a href="#">본론</a></li>
+            </ul>
+		</div>
+	<body>
+        
+	</body>
+</html>

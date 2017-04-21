@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			function func1(){
+				document.write("함수실행");
+			}
+			function func2(a,b){
+				return a+b;
+
+			}
+			function func3(a,b){
+				alert(a+b);
+				return a+b;
+			}
+
+			var c='Hi, I\'m Gwangmin Jeong who live in Bucheon city';
+			function func4(){
+				alert(c);
+			}
+
+			var d=12422;
+			function func5(){
+				d=63332; //var로 선언하지 않을 경우 전역변수의 값을 바꾸는 것으로 간주한다.
+				alert(d);
+				return d;
+			}
+
+			function func6(){
+				alert(d);
+				return d;
+			}
+
+			function func7(){
+				document.write(e);
+				return e;
+			}
+
+			func3(100,100);
+
+			document.write(d);
+			document.write(func2(100,10));
+			var b=func2(100,10);
+
+		</script>
+		</style>
+	</head>
+	<body>
+		<button onclick="func1();">함수 1실행</button>
+		<button onclick="func3(100,100);">함수 3실행</button>
+		<button onclick="func4();">함수 4실행</button>
+		<button onclick="func5();">함수 5실행</button>
+		<button onclick="func6();">함수 6실행</button>
+		<button onclick="func7();">함수 7실행</button>
+	</body>
+</html>			

@@ -1,0 +1,103 @@
+ex02.html:17 runc run:1
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent();
+    [div#content, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children();
+    [h1, ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children()[1];
+    <ul>​…​</ul>​
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children()[1].next();
+     VM1754:1 Uncaught TypeError: 
+$(...).css(...).css(...).parent(...).children(...)[1].next is not a function
+    at <anonymous>:1:90
+    (anonymous) @ VM1754:1
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').next();
+    [ul, prevObject: n.fn.init(1), context: document]0: ulcontext: documentlength: 1prevObject: n.fn.init(1)__proto__: Object(0)
+
+$('#content>h1').next();
+    [ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1');
+    [h1, prevObject: n.fn.init(1), context: document, selector: "#content>h1"]
+
+$('#content>h1').parent();
+    [div#content, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children();
+    [h1, ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children('ul');
+    [ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children()[1];
+    <ul>​…​</ul>​
+
+$('#content>h1').parent().children('ul').children();
+    [li, li, li, prevObject: n.fn.init(1), context: document]
+
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)');
+    [li, prevObject: n.fn.init(1), context: document]0: licontext: documentlength: 1prevObject: n.fn.init(1)__proto__: Object(0)
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)').next();
+    [li, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)').next().prev();
+    [li, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent();
+     [div#content, prevObject: n.fn.init(1), context: document]0: div#contentaccessKey: ""align: ""assignedSlot: nullattributes: NamedNodeMapbaseURI: "http://127.0.0.1:2659/jquery%20day13/ex02.html"childElementCount: 2childNodes: NodeList(5)children: HTMLCollection(2)classList: DOMTokenList(0)className: ""clientHeight: 127clientLeft: 0clientTop: 0clientWidth: 322contentEditable: "inherit"dataset: DOMStringMapdir: ""draggable: falsefirstChild: textfirstElementChild: h1hidden: falseid: "content"innerHTML: "↵            <h1 style="background-color: blue; color: red;">목록</h1>↵            <ul>↵                <li>서론</li>↵                <li>본론</li>↵                <li>결론</li>↵            </ul>↵        "innerText: "목록↵↵서론↵본론↵결론"isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: ullocalName: "div"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: nullnextSibling: textnodeName: "DIV"nodeType: 1nodeValue: nulloffsetHeight: 127offsetLeft: 8offsetParent: bodyoffsetTop: 8offsetWidth: 322onabort: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectstart: nullonshow: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<div id="content">↵            <h1 style="background-color: blue; color: red;">목록</h1>↵            <ul>↵                <li>서론</li>↵                <li>본론</li>↵                <li>결론</li>↵            </ul>↵        </div>"outerText: "목록↵↵서론↵본론↵결론"ownerDocument: documentparentElement: bodyparentNode: bodyprefix: nullpreviousElementSibling: nullpreviousSibling: textscrollHeight: 143scrollLeft: 0scrollTop: 0scrollWidth: 322shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclarationtabIndex: -1tagName: "DIV"textContent: "↵            목록↵            ↵                서론↵                본론↵                결론↵            ↵        "title: ""translate: truewebkitdropzone: ""__proto__: HTMLDivElementcontext: documentlength: 1prevObject: n.fn.init(1)__proto__: Object(0)
+
+$('#content>h1').parent().children();
+      [h1, ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children().find('ul');
+      [prevObject: n.fn.init(2), context: document, selector: "ul"]
+
+$('#content).find('ul');
+  VM1906:1 Uncaught SyntaxError: missing ) after argument list
+
+$('#content').find('ul');
+      [ul, prevObject: n.fn.init(1), context: document, selector: "#content ul"]
+      
+$('#content').children().('ul');
+      VM1925:1 Uncaught SyntaxError: Unexpected token (
+
+$('#content').find('ul').css('backgroundColor','red');
+    [ul, prevObject: n.fn.init(1), context: document, selector: "#content ul"]
+
+$('#content>h1').parent().children().find('ul').css('backgroundColor','aqua');
+    [prevObject: n.fn.init(2), context: document, selector: "ul"]
+
+$('#content>h1').parent().children('ul').css('backgroundColor','aqua');
+    [ul, prevObject: n.fn.init(1), context: document]
+find('li');
+false
+
+$('#content').find('li');
+    [li, li, li, prevObject: n.fn.init(1), context: document, selector: "#content li"]
+
+$('li');
+    [li, li, li, prevObject: n.fn.init(1), context: document, selector: "li"]
+
+$('li:nth-child(1)');
+    [li, prevObject: n.fn.init(1), context: document, selector: "li:nth-child(1)"]0: licontext: documentlength: 1prevObject: n.fn.init(1)selector: "li:nth-child(1)"__proto__: Object(0)add: function (a,b)addBack: function (a)addClass: function (a)after: function ()ajaxComplete: function (a)ajaxError: function (a)ajaxSend: function (a)ajaxStart: function (a)ajaxStop: function (a)ajaxSuccess: function (a)andSelf: function (a)animate: function (a,b,c,d)append: function ()appendTo: function (a)attr: function (a,b)before: function ()bind: function (a,b,c)blur: function (a,c)change: function (a,c)children: function (c,d)clearQueue: function (a)click: function (a,c)clone: function (a,b)closest: function (a,b)constructor: function (a,b)contents: function (c,d)contextmenu: function (a,c)css: function (a,b)data: function (a,b)dblclick: function (a,c)delay: function (b,c)delegate: function (a,b,c,d)dequeue: function (a)detach: function (a)domManip: function Ha(a,b,c,d)each: function (a)empty: function ()end: function ()eq: function (a)error: function (a,c)extend: function ()fadeIn: function (a,c,d)fadeOut: function (a,c,d)fadeTo: function (a,b,c,d)fadeToggle: function (a,c,d)filter: function (a)find: function (a)finish: function (a)first: function ()focus: function (a,c)focusin: function (a,c)focusout: function (a,c)get: function (a)has: function (a)hasClass: function (a)height: function (d,e)hide: function (a,d,e)hover: function (a,b)html: function (a)index: function (a)init: function (a,b,c)innerHeight: function (d,e)innerWidth: function (d,e)insertAfter: function (a)insertBefore: function (a)is: function (a)jquery: "1.12.4"keydown: function (a,c)keypress: function (a,c)keyup: function (a,c)last: function ()length: 0load: function (a,b,c)map: function (a)mousedown: function (a,c)mouseenter: function (a,c)mouseleave: function (a,c)mousemove: function (a,c)mouseout: function (a,c)mouseover: function (a,c)mouseup: function (a,c)next: function (c,d)nextAll: function (c,d)nextUntil: function (c,d)not: function (a)off: function (a,b,c)offset: function (a)offsetParent: function ()on: function (a,b,c,d)one: function (a,b,c,d)outerHeight: function (d,e)outerWidth: function (d,e)parent: function (c,d)parents: function (c,d)parentsUntil: function (c,d)position: function ()prepend: function ()prependTo: function (a)prev: function (c,d)prevAll: function (c,d)prevUntil: function (c,d)promise: function (a,b)prop: function (a,b)push: function push()pushStack: function (a)queue: function (a,b)ready: function (a)remove: function (a)removeAttr: function (a)removeClass: function (a)removeData: function (a)removeProp: function (a)replaceAll: function (a)replaceWith: function ()resize: function (a,c)scroll: function (a,c)scrollLeft: function (d)scrollTop: function (d)select: function (a,c)selector: ""serialize: function ()serializeArray: function ()show: function (a,d,e)siblings: function (c,d)size: function ()slice: function ()slideDown: function (a,c,d)slideToggle: function (a,c,d)slideUp: function (a,c,d)sort: function sort()splice: function splice()stop: function (a,b,c)submit: function (a,c)text: function (a)toArray: function ()toggle: function (a,d,e)toggleClass: function (a,b)trigger: function (a,b)triggerHandler: function (a,b)unbind: function (a,b)undelegate: function (a,b,c)unload: function (a,c)unwrap: function ()val: function (a)width: function (d,e)wrap: function (a)wrapAll: function (a)wrapInner: function (a)Symbol(Symbol.iterator): function values()__proto__: Object
+
+$('li:first');
+          [li, prevObject: n.fn.init(1), context: document, selector: "li:first"]
+
+$('li:last');
+          [li, prevObject: n.fn.init(1), context: document, selector: "li:last"]0: licontext: documentlength: 1prevObject: n.fn.init(1)selector: "li:last"__proto__: Object(0)
+
+$('li:even');
+          [li, li, prevObject: n.fn.init(1), context: document, selector: "li:even"]
+
+$('li:odd');
+          [li, prevObject: n.fn.init(1), context: document, selector: "li:odd"]
+
+$('li:nth-child(2n)');
+          [li, prevObject: n.fn.init(1), context: document, selector: "li:nth-child(2n)"]

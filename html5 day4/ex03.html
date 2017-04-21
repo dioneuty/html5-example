@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+/*            display: inline-block;*/
+
+        }
+        div:nth-child(1){
+            background-color: rgba(255,0,255,1.0); 
+/*            컨텐츠 관련없이 색깔만 투명도 제어*/
+            position: static;
+        }
+        div:nth-child(3){
+            background-color: rgba(255,0,0,1.0);
+            opacity: 0.5; 
+/*            내부의 컨텐츠까지 투명도 제어*/
+            position: absolute;
+/*            문서 전체를 기준으로 좌료 0*0에서 시작*/
+            top:150px;
+            left:123px;
+        }
+        div:nth-child(4){
+            width: 100px;
+            height: 80px;
+            background-color: rgba(255,211,0,1.0);
+            position:fixed;
+/*            화면에 고정*/
+        }
+        
+        div:nth-child(5){
+             background-color: rgba(255,255,0,1.0);
+            opacity: 0.5; 
+/*            내부의 컨텐츠까지 투명도 제어*/
+        position: relative;
+/*            자신이 원래 위치하는 곳을 기준으로 좌표시작*/
+            top:150px;
+            left:123px;
+            
+        }
+        body>div:nth-child(8){
+            background-color:darkgray;
+            position: fixed;
+            left: 200px;
+        }
+        body>div:nth-child(8)>div{
+            width: 50px;
+            height: 50px;
+            background-color:cornflowerblue;
+            top:80px;
+            left: 80px;
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8
+        <div>8-1</div>
+    </div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>    
+</body>
+</html>

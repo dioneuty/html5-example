@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<style>
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		
+		#area {
+			width: 600px;
+			height: 500px;
+			background-color: antiquewhite;
+		}
+		
+		#box {
+			/*
+               width: 50px;
+               height: 50px;  
+*/
+			width: 80px;
+			height: 450px;
+			background-color: brown;
+			position: absolute;
+		}
+	</style>
+
+	<!--jquery -> jquery-ui-->
+	<script src="./js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script src="./js/jquery-ui.min.js" type="text/javascript"></script>
+	<script src="./js/jquery.bxslider.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var x = 0;
+		$('document').ready(function() {
+			var h = $('#box').css('top');
+			var func = function() {
+				alert('animation end')
+			};
+			$('#content>button').first().click(function() {
+				/*x+=10;   
+				var env1={'margin-left':'600px',
+				var env1={'margin-left':x+'px',
+					 'width':'+=100px',
+					 'height':'+=100px',
+					 'border-radius':'+=50px',
+					 'opacity':0.3};
+			   $('#box').animate(env1,'fast'); //속도*/
+
+				x += 50;
+				var env1 = {
+					'margin-left': '500px', //x + 'px',200px'
+					'width': '100px',
+					'height': '100px',
+					'opacity': 0.3
+				};
+
+				//딜레이
+				//.delay(1000)
+
+				/*                   $('#box').animate({'left':'400px'},3000).animate({'width':'100px', 'height':'100px'},1000).animate({'top':'200px'}).animate({'left':'0px'}).animate({'height':'hide'}).animate({'height':'show'}).animate({'height':'toggle'}).animate({'height':'toggle'}).animate({'height':'toggle'}); 
+               });
+                */
+
+				//.animate 메소드
+				// 애니메이션은 queue구조로 수행된다. 
+				// stop명령을 내리면 수행하고 있던 해당 애니메이션을 quque에서 빼 버리고, 그 다음에 대기하던 명령이 마저 실행된다. 
+				$('#box').animate(env1, 5000).animate({
+					'top': '300px'
+				}, 2000).delay.animate({
+					'width': '100px'
+				}, 2000); //fast,slow,3000 등, 숫자는 따옴표 없이
+			}).next().click(function() {
+				$('#box').animate({
+					'margin-left': '300px'
+				}, 'easein', 3000);
+			}).next().next().click(function() {
+				//$('#box').animate({'height':'hide'},5000);
+				$('#box').animate({
+					'height': 'toggle'
+				}, 3000);
+				/*  $('#box').animate({'left':'200px'},1000).animate({'top':'200px'},1000).animate({'left':'0px'},1000).animate({'top':h},1000)
+				 */
+
+			}).next().next().next().click(function() {
+				$('#box').clearQueue(); //queue 안에 남아 있는 애니메이션들 모두 비우기
+				$('#box').stop(); //stop만 있으면 해당 애니메이션이 정지, 그 다음의 애니메이션이 바로 수행된다
+				$('#box').stop(true); //인자 옵션: true,false queue를 지울 것인지, 말 것인지?
+			}).last().animate({
+				'left': '400px'
+			}, 1000, func); //on end
+			//마지막 인자를 넣음으로써 animation이 콜백함수로서의 기능 
+
+			//애니메이션 흐름 속도 조절
+			//기본값: linear(일정한)
+			// swing(부드럽게: 처음엔 천천히 , 중간에는 일정히, 마지막에 천천히)
+			// default, 나머지는 jqueryUi에서만 지원
+			
+			//근래에는 플러그인의 발달로 플러그인 자체 내에서 애니메이션 흐름 속도를 조절하게 되어 있는 경우가 많아서 jqueryUI를 잘 사용하지 않는다.
+			
+			
+		}); //ready end
+	</script>
+</head>
+
+<body>
+	<div id="content">
+		<h1>애니메이션</h1>
+		<button>시작</button>
+		<button>다른</button>
+		<button>다른</button>
+		<button>정지</button>
+		<button>마지막</button>
+		<div id="area">
+			<div id="box"></div>
+		</div>
+	</div>
+</body>
+
+</html>

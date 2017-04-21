@@ -1,0 +1,16 @@
+$(':checked').attr('id');
+"hobby2"
+$(':checked').attr('id');
+"hobby2"
+$(':checked').attr('id');
+"hobby3"
+$(':checked');
+[input#hobby3, option, prevObject: n.fn.init(1), context: document, selector: ":checked"]0: input#hobby31: optioncontext: documentlength: 2prevObject: n.fn.init(1)selector: ":checked"__proto__: Object(0)
+$(':checked');
+[input#hobby2, input#hobby3, option, prevObject: n.fn.init(1), context: document, selector: ":checked"]0: input#hobby21: input#hobby32: optioncontext: documentlength: 3prevObject: n.fn.init(1)selector: ":checked"__proto__: Object(0)
+$(':checked').attr('id');
+"hobby2"
+var arr=$(':checked');
+undefined
+for(var i=0;i<arr.length;i++){alert($(arr[i]).attr('id'));}
+undefined

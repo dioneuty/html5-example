@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			alert(window.screen.availWidth+"*"
+				+window.screen.availHeight+" "+window.screen.colorDepth+"비트");
+			alert(window.screen.width+window.screen.height);
+			// window.location.replace("http://www.google.com/");
+			
+
+			//주소 옮기는 방식은 사실 별 차이 없다. 
+			function func1(a) {
+				window.location.replace(a); 
+				//메소드 사용(setter), 메소드 방식이 프로퍼티 방식보다 안정성이 더 높다. 해당 페이지로 바꿔버림
+			}
+			function func2() {
+				window.location.href="https://google.com"; 
+				//프로퍼티 사용, 프로퍼티 방식이 메소드 방식보다 성능 상 더 높다. 주소에 입력 후 넘어감
+			}
+
+		</script>
+		
+	</head>
+	<body>
+
+		<button onclick="func1('http://naver.com');">다음</button>
+		<button onclick="func1('http://google.com');">구글</button><button onclick="func2();">구글 https</button>
+		<button onclick="window.location.reload();">새로고침</button>
+	</body>
+</html>		

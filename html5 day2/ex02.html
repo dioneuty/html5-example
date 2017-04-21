@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        /*
+        공백: 자손 엘리먼트
+        >: 자식 엘리먼트
+        ,: 따로 따로
+        +: 최초 등장하는 형제 엘리먼트
+        -: 다음 형제 엘리먼트들
+        
+        */
+       
+        /*#menu{background-color: aliceblue}
+        /*#footer{background-color: ghostwhite}
+        /* 컨텐츠 아래 자식요소에만 부여할 때 */
+        /*#content>p{background-color: mistyrose; text-align: center;}
+        /* 헤더 다음의 div : div들은 형제요소임 */
+        /*#header+div{color: hotpink}
+        /*#header+div+div>h1{color: hotpink}
+/*        header 다음 div, menu 다음 div*/
+        #header~div{background-color: aqua;}
+        #menu~div{background-color: aqua;}
+/*        바로 밑에 자식*/
+        #menu>ul>li{background-color: aqua;}
+/*        하위 자손 모두 선택*/
+        #menu li{background-color: aqua}
+        #footer, li{background-color:coral}
+        #content-#footer{color: bisque}
+        
+        #menu>ul>li:nth-child(2),#menu>ul>li:nth-child(4){background-color: brown;}
+        #menu>ul>li:nth-child(even){background-color: aquamarine}
+        
+        table{
+            width:400px;
+        }
+        table td{
+            background-color: bisque
+        }
+        table tr:nth-child(even)>td{
+            background-color:red;
+        }
+        #content p:nth-child(2){
+            color:red;
+            width:300px;
+            height:100px;
+            font-size:1.5em;
+            font-weight: bold;
+            font-style: italic;
+            font-family: '휴먼체''궁서체';
+            text-decoration: line-through;
+            display: block;
+            background-color: azure;
+        }
+        #content p:nth-child(3){
+            color:blue;
+            display: inline;
+            background-color: aqua;
+        }
+        #content p:nth-child(3)>a:nth-child(1){
+            color:red;
+            text-decoration: none;
+            text-transform: lowercase;
+            text-align: right;
+            display: block;
+            width: 150px
+        }   
+        #content p:nth-child(3)>a:nth-child(2){
+            color:blue;
+            text-align:left:
+        }
+        #content>p:nth-child(4),
+        ,#content>p:nth-child(5){
+            display:inline-block;
+        }
+        #content>p:nth-child(5){
+            display: block;
+            width: 600px
+        }
+        table>tbody>td{color: gold;}
+        #menu>ul li, #menu>ul>a{
+            display: inline-block;
+            width:80px;
+            height: 20px;
+            text-decoration: none;
+            text-align: center;
+            background-color: beige;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="naver.gif" alt="logo">
+        
+    </div>
+    <div id="menu">
+        <ul>
+             <li>
+                <a href="#">menu1</a>
+            </li>            
+            <li>
+                <a href="#">menu2</a>
+            </li>            
+            <li>
+                <a href="#">menu3</a>
+            </li>            
+            <li>
+                <a href="#">menu4</a>
+            </li><li>
+                <a href="#">menu5</a>
+            </li><li>
+                <a href="#">menu6</a>
+            </li><li>
+                <a href="#">menu7</a>
+            </li>
+        </ul>
+    </div>
+    <div id="content">
+       <h2>소제목</h2>
+        <p> 환영합니다</p>
+        <p> 환영합니다
+            <a href="#">link:</a>
+            <a href="#">efess</a>
+        </p>
+
+        <p> 환영합니다</p>
+        
+        <p> 환영합니다</p>
+        <p> 환영합니다</p>
+        <p> 환영합니다</p>
+        <table>
+            <tr>
+                <th>컬럼1</th>
+                <th>컬럼2</th>
+                <th>컬럼3</th>
+                <th>컬럼4</th>
+            </tr>
+            <tr>
+                <td>컬럼1</td>
+                <td>컬럼2</td>
+                <td>컬럼3</td>
+                <td>컬럼4</td>
+            </tr>
+            <tr>
+                <td>컬럼1</td>
+                <td>컬럼2</td>
+                <td>컬럼3</td>
+                <td>컬럼4</td>
+            </tr>
+            <tr>
+                <td>컬럼1</td>
+                <td>컬럼2</td>
+                <td>컬럼3</td>
+                <td>컬럼4</td>
+            </tr>
+            <tr>
+                <td>컬럼1</td>
+                <td>컬럼2</td>
+                <td>컬럼3</td>
+                <td>컬럼4</td>
+            </tr>
+        </table>  
+    </div>
+    <div id="footer">
+        <p>공지사항
+네이버 PC메인 개편, 베타버전을 먼저 공개합니다</p>
+        <p>네이버 정책 및 약관회사소개광고마이비즈니스제휴제안이용약관</p>
+    </div>
+</body>
+</html>

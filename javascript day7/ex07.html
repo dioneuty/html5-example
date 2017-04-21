@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			document.write('배열 메소드</br>');
+			var arr1=new Array();
+			document.write(arr1,'</br>');
+
+			var arr2=new Array(5);
+			arr2.fill(100);//현재 호환성 문제 있는 메소드임, 익스플로러나 파이어폭스에서는 실행되지 않음.
+			document.write(arr2,'</br>');
+			
+
+			//var arr3=[];
+
+			//빈 배열을 복사
+			//깊은 복사
+			var arr3=arr2.concat([]);
+			
+			//var arr3=arr2.copyWithin(2,0);
+
+			arr3[1]=200;
+			document.write(arr3,'</br>');
+
+			arr3.push(100);
+			arr3.push(200);
+			arr3.push(300);
+			arr3.push(400);
+			arr3.push(500);
+			document.write(arr3,'</br>');
+
+			//array의 길이만 지정된 채 값이 비어 있는 상태에서는 undefined으로 나온다. 
+		/*	for (var i = 0; i < arr3.length; i++) {
+				document.write(i+"="+arr3[i]+"</br>");
+			}*/
+
+			arr3.pop();
+			arr3.pop();
+			document.write(arr3,'</br>');
+
+			arr3.reverse();
+			document.write(arr3,'</br>');
+
+
+		</script>
+		
+	</head>
+	<body>
+		
+	</body>
+</html>		

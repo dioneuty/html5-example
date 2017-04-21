@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			var a=100;
+			function func01() {
+				//지역변수
+				var a=10;
+				a++;
+				document.write('지역변수: '+a+'</br>');
+			}
+			func01();
+			document.write(a+'</br>');
+
+			function func02() {
+				document.write("func02함수 실행</br>");
+				var func03=function(){
+					document.write("(감싸진 func03함수 실행)</br>");
+				}
+				return func03;
+			}
+			//클로져 - 지역변수 func03을 return를 통해 끄집어내서 밖에서 실행된다.
+			func02()();
+
+			///////////////ex:Bean객체//////////////////
+            
+
+
+            //func01()();
+            //   ↓
+            //return  (); => func03();
+
+
+
+            function student(){
+                return {
+                    'num':0
+                    ,'kor':0
+                    ,'eng':0
+                    ,'math':0
+                    ,getNum:function(){
+                        return this.num;
+                    }
+                    ,setNum:function(num){
+                        this.num=num;
+                    }
+                    ,getKor:function(){
+                        return this.kor;
+                    }
+                    ,setKor:function(kor){
+                        this.kor=kor;
+                    }
+                    ,getEng:function(){
+                        return this.eng;
+                    }
+                    ,setEng:function(eng){
+                        this.eng=eng;
+                    }
+                    ,getMath:function(){
+                        return this.math;
+                    }
+                    ,setMath:function(math){
+                        this.math=math;
+                    }
+                }; // return end  
+            }//student end
+            var arr = new Array();
+
+            arr[0]=student();
+            arr[0].setNum(1000);
+            arr[0].setKor(90);
+            arr[0].setEng(80);
+            arr[0].setMath(70);
+            arr[1]=student();
+            arr[1].setNum(1001);
+            arr[1].setKor(50);
+            arr[1].setEng(55);
+            arr[1].setMath(52);
+            
+            
+            document.write("<table>");
+            document.write("<tr>");
+            document.write("<td>학번</td>");
+            document.write("<td>국어</td>");
+            document.write("<td>영어</td>");
+            document.write("<td>수학</td>");
+            document.write("</tr>");
+            for(var i=0; i<arr.length; i++){
+                var stu=arr[i];
+            document.write("<tr>");
+            document.write("<td>"+stu.getNum()+"</td>");
+            document.write("<td>"+stu.getKor()+"</td>");
+            document.write("<td>"+stu.getEng()+"</td>");
+            document.write("<td>"+stu.getMath()+"</td>");
+            document.write("</tr>");
+            }
+            document.write("</table>");
+
+            //콜백함수
+            function func3(a){
+            	a();
+            }
+            var $=function(a){a();};
+            $(func1);
+
+		</script>
+		<style>
+			table td{
+				border-style: 1px black solid;
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+</html>		

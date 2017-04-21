@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <style>
+        #content>div {
+            width: 4080px;
+            background-color: antiquewhite;
+        }
+    </style>
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('button').first().next().attr("disabled", 'disabled');
+            
+            $('button').first().click(function() {
+                $(this).attr("disabled", 'disabled');
+                //hide, fadeOut, slideUp
+
+                //$('#content>div').hide(3000, function() {
+                $('#content>div').slideUp(3000, function() {
+//                    alert('다 숨겨짐');
+                    $('button').first().next().removeAttr('disabled');
+                });
+            });
+
+            $('button').first().next().click(function() {
+                //show, fadein, slideDown
+                
+                //$('#content>div').show(3000);
+                $('#content>div').slideDown(3000, function(){
+                    $('button').first().removeAttr('disabled');
+                    $('button').first().next().attr("disabled", 'disabled');
+                    
+                });
+                //$('button').first().attr("disabled", 'disabled');
+            });
+            
+            var tf = false;
+            $('button:eq(2)').click(function(){
+                $('#content>div').fadeTo(3000,0.5);//0.5 투명도
+            });
+            
+            
+            $('button').last().click(function() {
+                //toggle, fadeToggle, slideToggle
+                
+                //$('#content>div').toggle(3000, function() {
+                
+                $('#content>div').slideToggle(1000, function() {
+                    tf = !tf;
+//                    alert('end'+":"+tf);
+                    
+                    if (tf) $('button').last().text('on');
+                    else $('button').last().text('off');
+                }); //fadetoggle end
+            });
+        }); //ready
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <button>hidden</button>
+        <button>show</button>
+        <button>0.5</button>
+        <button>toggle</button>
+        <div>using the button efejkfwejkfljwelfwe fewkfweklfewf wefkwefjwlekkfjwklfjkwjlflwefwe 영조 한조 두조 세조 네조 다섯조 TV 쿠팡<br> 인기 생활 가전, 계절 가전, 컴퓨터, 디지털기기 특가, 쿠팡맨이 로켓배송! www.coupang.combr 케이블방송인터넷
+            <br> 가입센터 지역케이블방송 가입센터 전국 어디나 당일설치 설치비무료 24시간상담가능 stv-cable.com
+        </div>
+    </div>
+</body>
+
+</html>

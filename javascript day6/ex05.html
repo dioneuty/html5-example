@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			function checkForm() {
+				/* 과거 비표준의 form tag 접근 방식
+					(document.)form.name(input).value;
+					(document.)forms.id(form).name(input).value;
+					id(form).naver(input).value;
+				*/
+				var id=document.fck.uid.value;
+				var pw=document.fck.upw.value;
+				var result=true;
+				if(id==""){
+					result=false;
+					alert("id항목이 비었습니다.");
+				}
+				if(pw==""){
+					result=false;
+					alert("pw항목이 비었습니다");
+				}else if(pw.length<4){
+					result=false;
+					alert("pw는 4자 이상입니다");
+				}
+				alert(document.fck.sel.value);
+				return result;
+			}
+			function checkID(){
+				var id=document.fck.uid.value;
+				var pw=document.fck.upw.value;
+				if(id==""){
+					alert("id항목이 비었습니다");
+				}
+			}
+
+		</script>
+		</style>
+	</head>
+	<body>
+		<h1>회원가입</h1>
+		<form id="fck" action="ex01.html" onsubmit="return checkForm();">
+			<p>
+				<label for="uid">ID</label>
+				<input type="text" name="uid"/> <!-- id="uid" -->
+				<input type="button" value="id체크" onclick="checkID();"/>
+			</p>
+			<p>
+				<label for="upw">PW</label>
+				<input type="password" name="upw" /><!-- id="pw" -->
+			</p>
+			<p>
+				<select name="sel" id="">
+					<option value="it1">item1</option>
+					<option value="it2">item2</option>
+					<option value="it3">item3</option>
+				</select>
+			</p>
+			<p>
+			<input type="submit" value="전송"/>
+			<input type="reset" value="취소"/>
+			</p>
+		</form>
+	</body>
+</html>			

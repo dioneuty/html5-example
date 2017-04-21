@@ -1,0 +1,42 @@
+document.lastChild.lastChild;
+<body>​<div id=​"header">​…​</div>​<div id=​"menu">​…​</div>​<div id=​"content">​…​</div>​<!-- script위치가 head에 있으면 html태그가 다 생성되기 전에 자바스크립트 실행이 되어 버리므로 생성되지 않은 html태그를 호출해 버려서 undefined 에러가 날 수 있다. --><script lang=​"javascript">​…​</script>​</body>​
+document.lastChild.lastChild.nextSibling;
+null
+document.lastChild.lastChild.nextSibling;
+null
+document.lastChild.lastChild.nextSibling.nextSibling;
+VM961:1 Uncaught TypeError: Cannot read property 'nextSibling' of null
+    at <anonymous>:1:41
+(anonymous) @ VM961:1
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling;
+#textassignedSlot: nullbaseURI: "file:///C:/html5%20example/javascript%20day8/ex07.html"childNodes: NodeList(0)data: "↵		"firstChild: nullisConnected: truelastChild: nulllength: 3nextElementSibling: div#menunextSibling: div#menunodeName: "#text"nodeType: 3nodeValue: "↵		"ownerDocument: documentparentElement: bodyparentNode: bodypreviousElementSibling: div#headerpreviousSibling: div#headertextContent: "↵		"wholeText: "↵		"__proto__: Text
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling;
+<div id=​"menu">​…​</div>​
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+undefined
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+<ul>​<li>​menu1​</li>​<li>​menu2​</li>​<li>​menu3​</li>​<li>​menu4​</li>​<li>​menu11​</li>​<li>​menu12​</li>​<li>​menu13​</li>​<li>​menu14​</li>​<li>​menu15​</li>​<li>​menu16​</li>​<li>​menu17​</li>​<li>​menu18​</li>​<li>​menu19​</li>​<li>​menu20​</li>​<li>​menu21​</li>​<li>​menu22​</li>​<li>​menu23​</li>​<li>​menu24​</li>​<li>​menu25​</li>​<li>​menu26​</li>​<li>​menu27​</li>​<li>​menu28​</li>​<li>​menu29​</li>​<li>​menu30​</li>​<li>​menu31​</li>​<li>​menu32​</li>​<li>​menu33​</li>​<li>​menu34​</li>​<li>​menu35​</li>​<li>​menu36​</li>​<li>​menu37​</li>​<li>​menu38​</li>​<li>​menu39​</li>​<li>​menu40​</li>​<li>​menu41​</li>​<li>​menu42​</li>​<li>​menu43​</li>​<li>​menu44​</li>​<li>​menu45​</li>​<li>​menu46​</li>​<li>​menu47​</li>​<li>​menu48​</li>​<li>​menu49​</li>​<li>​menu50​</li>​<li>​menu51​</li>​<li>​menu52​</li>​<li>​menu53​</li>​<li>​menu54​</li>​<li>​menu55​</li>​<li>​menu56​</li>​<li>​menu57​</li>​<li>​menu58​</li>​<li>​menu59​</li>​<li>​menu60​</li>​<li>​menu61​</li>​<li>​menu62​</li>​<li>​menu63​</li>​<li>​menu64​</li>​<li>​menu65​</li>​<li>​menu66​</li>​<li>​menu67​</li>​</ul>​
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.parentNode;
+<div id=​"menu">​…​</div>​
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.parentNode.nextSibling;
+#text
+document.lastChild.lastChild.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.parentNode.nextSibling.nextSibling;
+<div id=​"content">​…​</div>​
+document.lastChild.firstChild;
+<head>​…​</head>​
+document.lastChild.firstChild.nextElementSibling;
+<body>​…​</body>​
+document.lastChild.firstChild.nextElementSibling.nextElementSibling;
+null
+document.lastChild.firstChild.nextElementSibling.nextSibling;
+null
+document.lastChild.firstChild.nextElementSibling;
+<body>​<div id=​"header">​…​</div>​<div id=​"menu">​…​</div>​<div id=​"content">​…​</div>​<!-- script위치가 head에 있으면 html태그가 다 생성되기 전에 자바스크립트 실행이 되어 버리므로 생성되지 않은 html태그를 호출해 버려서 undefined 에러가 날 수 있다. --><script lang=​"javascript">​…​</script>​</body>​
+document.lastChild.firstChild.nextElementSibling.firstChild;
+#text
+document.lastChild.firstChild.nextElementSibling.firstChild.next;
+undefined
+document.lastChild.firstChild.nextElementSibling.firstChild.nextElementSibling;
+<div id=​"header">​…​</div>​
+document.lastChild.firstChild.nextElementSibling.firstChild.nextElementSibling.nextElementSibling;
+<div id=​"menu">​…​</div>​

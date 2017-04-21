@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>page title</title>
+    <meta charset="utf-8">
+    <style>
+/*
+        div{
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            border-radius: 25px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            transition-duration: 1s;
+        }
+        div:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            position: fixed;
+        }
+*/
+        div{
+            background-image: url(imgs/%EB%86%8D%EA%B5%AC%EA%B3%B5.jpg);
+            width: 220px;
+            height: 220px;
+            display: inline-block;
+            animation-name: me;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+            position: relative;
+        }
+        @keyframes me{
+            /*from{top: 0px; color:black; background-color: aqua}
+            to{top: 200px; color: white; background-color: blue}*/
+/*
+            0%{top: 0px; left:0px; color:black; background-color: aqua}
+            50%{top: 200px; left:0px; color: white; background-color: blue}
+            75%{top: 180px; left:200px; color: white; background-color: coral}
+            100%{top: 0px; left:0px; color:black; background-color: aqua}
+*/
+            0%{top:0px;}
+            50%{top:400px;}
+            100%{top:0px;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div>me</div>
+</body>
+</html>

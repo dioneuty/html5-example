@@ -1,0 +1,42 @@
+ex02.html:17 runc run:1
+
+$('li:gt(3)');
+    [li, li, li, li, li, li, li, li, prevObject: n.fn.init(1), context: document, selector: "li:gt(3)"]
+
+$('li:gt(0)');
+    [li, li, li, li, li, li, li, li, li, li, li, prevObject: n.fn.init(1), context: document, selector: "li:gt(0)"]0: li1: li2: li3: li4: li5: li6: li7: li8: li9: li10: licontext: documentlength: 11prevObject: n.fn.init(1)selector: "li:gt(0)"__proto__: Object(0)
+
+$('li:gt(0)');
+    [li, li, li, li, li, li, li, li, li, li, li, prevObject: n.fn.init(1), context: document, selector: "li:gt(0)"]
+
+$('li:not(:eq(3)');
+    jquery-1.12.4.min.js:2 Uncaught Error: Syntax error, unrecognized expression: li:not(
+        at Function.fa.error (jquery-1.12.4.min.js:2)
+        at fa.tokenize (jquery-1.12.4.min.js:2)
+        at fa.select (jquery-1.12.4.min.js:2)
+        at fa (jquery-1.12.4.min.js:2)
+        at ta (jquery-1.12.4.min.js:2)
+        at jquery-1.12.4.min.js:2
+        at f (jquery-1.12.4.min.js:2)
+        at fa.select (jquery-1.12.4.min.js:2)
+        at Function.fa [as find] (jquery-1.12.4.min.js:2)
+        at n.fn.init.find (jquery-1.12.4.min.js:2)
+    fa.error @ jquery-1.12.4.min.js:2
+    fa.tokenize @ jquery-1.12.4.min.js:2
+    fa.select @ jquery-1.12.4.min.js:2
+    fa @ jquery-1.12.4.min.js:2
+    ta @ jquery-1.12.4.min.js:2
+    (anonymous) @ jquery-1.12.4.min.js:2
+    f @ jquery-1.12.4.min.js:2
+    fa.select @ jquery-1.12.4.min.js:2
+    fa @ jquery-1.12.4.min.js:2
+    find @ jquery-1.12.4.min.js:2
+    n.fn.init @ jquery-1.12.4.min.js:2
+    n @ jquery-1.12.4.min.js:2
+    (anonymous) @ VM2124:1
+
+$('li:not(:eq(3))');
+    [li, li, li, li, li, li, li, li, li, li, li, prevObject: n.fn.init(1), context: document, selector: "li:not(:eq(3))"]0: liaccessKey: ""assignedSlot: nullattributes: NamedNodeMapbaseURI: "http://127.0.0.1:2659/jquery%20day13/ex02.html"childElementCount: 0childNodes: NodeList(1)children: HTMLCollection(0)classList: DOMTokenList(0)className: ""clientHeight: 21clientLeft: 0clientTop: 0clientWidth: 282contentEditable: "inherit"dataset: DOMStringMapdir: ""draggable: falsefirstChild: textfirstElementChild: nullhidden: falseid: ""innerHTML: "서론"innerText: "서론"isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "li"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: linextSibling: textnodeName: "LI"nodeType: 1nodeValue: nulloffsetHeight: 21offsetLeft: 48offsetParent: bodyoffsetTop: 72offsetWidth: 282onabort: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforepaste: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncontextmenu: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonsearch: nullonseeked: nullonseeking: nullonselect: nullonselectstart: nullonshow: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullonvolumechange: nullonwaiting: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwheel: nullouterHTML: "<li>서론</li>"outerText: "서론"ownerDocument: documentparentElement: ulparentNode: ulprefix: nullpreviousElementSibling: nullpreviousSibling: textscrollHeight: 21scrollLeft: 0scrollTop: 0scrollWidth: 282shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclarationtabIndex: -1tagName: "LI"textContent: "서론"title: ""translate: truetype: ""value: 0webkitdropzone: ""__proto__: HTMLLIElement1: li2: li3: li4: li5: li6: li7: li8: li9: li10: licontext: documentlength: 11prevObject: n.fn.init(1)selector: "li:not(:eq(3))"__proto__: Object(0)
+
+$('ul:first-child');
+    [prevObject: n.fn.init(1), context: document, selector: "ul:first-child"]context: documentlength: 0prevObject: n.fn.init(1)selector: "ul:first-child"__proto__: Object(0)

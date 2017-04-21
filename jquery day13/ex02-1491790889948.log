@@ -1,0 +1,56 @@
+ex02.html:17 runc run:1
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent();
+    [div#content, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children();
+    [h1, ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children()[1];
+     <ul>​…​</ul>​
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').parent().children()[1].next();
+     VM1754:1 Uncaught TypeError: 
+
+$(...).css(...).css(...).parent(...).children(...)[1].next is not a function
+    at <anonymous>:1:90
+     (anonymous) @ VM1754:1
+
+$('#content>h1').css('backgroundColor','blue').css('color','red').next();
+     [ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').next();
+     [ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1');
+     [h1, prevObject: n.fn.init(1), context: document, selector: "#content>h1"]
+
+$('#content>h1').parent();
+     [div#content, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children();
+ [h1, ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children('ul');
+ [ul, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children()[1];
+ <ul>​…​</ul>​
+
+$('#content>h1').parent().children('ul').children();
+ [li, li, li, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)');
+ [li, prevObject: n.fn.init(1), context: document]0: licontext: documentlength: 1prevObject: n.fn.init(1)__proto__: Object(0)
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)').next();
+ [li, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children('ul').children('li:nth-child(1)').next().prev();
+ [li, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent();
+ [div#content, prevObject: n.fn.init(1), context: document]
+
+$('#content>h1').parent().children();
+ [h1, ul, prevObject: n.fn.init(1), context: document]

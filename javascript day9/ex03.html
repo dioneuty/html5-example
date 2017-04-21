@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+
+	<script lang="javascript">
+		//이벤트 핸들러
+		// /*function func1() {
+		// 	alert('버튼작동함');
+		// }*/
+		// var func1=function(){
+		// 	alert('버튼작동함');
+		// }
+		// //프로퍼티 방식
+		// var btn=document.querySelector("body>div>button");
+		// //onclick은 입력값이 함수
+		// /*btn.onclick=function(){
+		// 	alert('버튼작동함');
+		// }*/
+		// btn.onclick=func1;
+
+		// window.onload 안에서 설정해야 head에 script태그가 위치해도 온전히 기능을 수행시킬 수 있다.
+		var btn = document.querySelector("body>div>button")
+		console.log('btn before window.onload: ' + btn);
+
+		window.onload = function() {
+
+			alert('문서의 로딩이 완료되었습니다');
+			var btn = document.querySelector("body>div>button");
+			console.log('btn after window.onload: ' + btn);
+			btn.onclick = function() {
+				alert('버튼작동함');
+			}
+			btn.onmouseover = function() {
+				console.log('마우스 위로 올라감');
+			}
+			btn.onmouseout = function() {
+				console.log('마우스가 빠져나감');
+			}
+			btn.onmousedown = function() {
+				console.log('마우스 다운');
+			}
+			btn.onmouseup = function() {
+				console.log('마우스 업');
+			}
+			btn.onfocus = function() {
+				console.log('버튼이 포커스 얻음');
+			}
+			btn.onblur = function() {
+				console.log('버튼이 포커스 잃음');
+			}
+
+		}
+
+	</script>
+</head>
+
+<body>
+	<div>
+		<!-- <button onclick="func1();">버튼</button> -->
+		<button>버튼</button>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		var input, span;
+		window.onload = function() {
+			input = document.querySelector("#content input");
+			// input(); 
+			span = document.querySelector("#content span");
+			// span();
+			// input.onkeyup=function () {
+			// 	alert("key");
+			// }
+
+			// input.onkeyup=showMsg;
+			input.addEventListener('keypress', showMsg);
+			//document로 하면 텍스트area에 입력하지 않아도 키보드만 누르면 메세지가 삽입된다.
+			document.addEventListener('keypress', showMsg);
+
+		};
+
+		function showMsg(event) {
+			// alert('key');
+			//입력란에 키보드를 누를 때만 문자가 삽입되도록 조건문을 추가해야 한다. 
+			if (event.target == input) {
+				span.innerText = span.innerText + event.key;
+			}
+		}
+
+	</script>
+	<style>
+		/*		*{
+				margin: 0px auto;
+				padding: 0px;
+			}*/
+		
+		#content {
+			color: red;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<form>
+			<input type="text"><span></span>
+		</form>
+	</div>
+</body>
+
+</html>

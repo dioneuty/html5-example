@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript">
+            var obj=['item1','item2','item3'];
+            
+            
+            window.onload=function(){
+                $('h1').css('color','red');
+                var h1=document.querySelector('h1');
+                $(h1).css('backgroundColor','yellow');
+                
+    //            javascript의 반복문
+              /*  obj.forEach(function(ele,idx){
+                    alert(ele);
+                    
+                    
+                    array.forEach( function( value, index ){};
+                });*/
+
+    //            jquery의 반복문
+//                $.each(obj,function(idx,ele){
+//                    alert(obj[idx]);
+//                });
+                
+                
+                $.each(obj,function(idx,ele){
+                    //this를 이용한 배열 값 찾기
+                    //this===ele
+                    alert(this);
+                });
+                 /*$('li').each(function(idx,ele){
+                var url=$(ele).children(':first').attr('href');
+                alert(url);
+                 })  */
+                
+                //li태그들을 배열로 간주하여 반복문으로 각각의 속성값들을 뽑아내기
+                $('li').each(function(){
+                var url=$(this).children(':first').attr('href');
+                alert(url);
+                });
+            };
+          
+           
+            
+        </script>
+	</head>
+
+	<body>
+        <div id="content">
+			<h1>목차</h1>
+            <ul>
+                <li><a href="ex01.html">서론</a></li>
+                <li><a href="ex02.html">내용2</a></li>
+                <li><a href="ex03.html">내용3</a></li>
+                <li><a href="ex04.html">내용4</a></li>
+                <li><a href="ex05.html">내용5</a></li>
+                <li><a href="ex06.html">내용6</a></li>
+                <li><a href="ex07.html">내용7</a></li>
+                <li><a href="ex08.html">내용8</a></li>
+                <li><a href="ex09.html">내용9</a></li>
+                <li><a href="ex10.html">내용10</a></li>
+                <li><a href="ex11.html">내용11</a></li>
+                <li><a href="ex12.html">본론</a></li>
+            </ul>
+		</div>
+	</body>
+</html>

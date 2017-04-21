@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+       <style>
+           h1{
+/*               background-color: chartreuse;*/
+               border-width: 3px;
+               border-color: aqua;
+               border-style: groove;
+           }
+        </style>
+        <script type="text/javascript">
+            window.onload=function(){
+                //$('h1').html('edit01');
+                var t1=$('h1');
+                var t1=$('h1:nth-child(2)');
+                var t2=document.querySelector('h1');
+                //alert(t1);
+                //t2는 jquery객체로 둘러쌓이지 않았으므로 jquery명령이 먹히지 않는다.
+                //t2.html('edit02');
+                t1.html('스타일 변경');
+                alert(t1.html());
+               //alert(t2.html()); jquery가 먹히지 않음
+                
+////////////////////////////////////////////////////    
+                //style: .css(프로퍼티, 밸류);
+                t1.css('backgroundColor','red');
+                $('h1:nth-child(3)').css('background-Color','aqua');
+                
+                var t4=$('h1:nth-child(4n)');
+                t4.css('backgroundColor','magenta');
+                alert(t4.css('backgroundColor'));
+                
+                $('h1:nth-child(5n)').css('fontSize','2.5em');
+                $('h1:nth-child(5n)').css('color','violet');
+                
+                alert(t1.css('fontSize'));
+                //숫자로 기입할 때 기본값은 픽셀
+                $('h1:nth-child(8)').css('fontSize',1);
+                $('h1:nth-child(9)').css('border','2px dotted red');
+                $('h1:nth-child(27)').css('background-color','gray');
+//////////////////////////////////////////////////
+                
+                //배열을 이용한 css 적용 (수업 과정 상 생략)
+//                var temp=['3px','aqua','dotted'];
+//                var cnt=0;
+//                var idx;
+//                $(t1).css(['border-width','border-color','border-style']);
+                
+//////////////////////////////////////////////////
+                
+                $('h1:nth-child(14)').css('background-color',function(idx){
+                    var array=['pink','hotpink','red'];
+                    return array[idx];
+                });
+//                    function(idx){
+//                    return 'rgb('+idx*10+',0,0')'
+//                });    
+                
+                var obj={'background-color':'blue'
+                        ,'border-width':'3px'
+                        ,'border-color': 'aqua'
+                        ,'border-style': 'dotted'
+                        };
+                $('h1:nth-child(20)').css(obj);
+                
+                
+                
+////////////////////////////////////////////////
+                
+                
+            };
+            
+           
+        </script>
+            
+	</head>
+
+	<body>
+       <h1>1</h1>
+       <h1>2</h1>
+       <h1>3</h1>
+       <h1>4</h1>
+       <h1>5 '$('h1:nth-child(5n)').css('fontSize','2.5em'), $('h1:nth-child(5n)').css('color','violet');'</h1>
+       <h1>6</h1>
+       <h1>7</h1>
+       <h1>8</h1>
+       <h1>9</h1>
+       <h1>10</h1>
+       <h1>11</h1>
+       <h1>12</h1>
+       <h1>13</h1>
+       <h1>14</h1>
+       <h1>15</h1>
+       <h1>16</h1>
+       <h1>17</h1>
+       <h1>18</h1>
+       <h1>19</h1>
+       <h1>20</h1>
+       <h1>21</h1>
+       <h1>22</h1>
+       <h1>23</h1>
+       <h1>24</h1>
+       <h1>25</h1>
+       <h1>26</h1>
+        <h1>27: background-color: gray;</h1>
+       <h1>28</h1>
+       <h1>29</h1>
+       <h1>30</h1>
+        
+	</body>
+</html>

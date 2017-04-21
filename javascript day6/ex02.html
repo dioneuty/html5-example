@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			// 조건문
+			if(true){
+				document.write("참입니다");
+			}else{
+				document.write("거짓입니다");
+			}
+			document.write('</br>');
+
+			var a=2;
+			if(a>3){
+				document.write("a는 3보다 크다");
+			}else if(a==3){
+				document.write("a와 3은 같다");
+			}else{
+				document.write("a는 3보다 작다");
+			}
+			document.write('</br>');
+
+			a='2000원';
+			if(a>999){
+				document.write("지폐");
+			}else if(a>9){
+				document.write("동전");
+			}else{
+				document.write("장난감");
+			}
+			document.write('</br>');
+
+			a=parseInt('2000원');
+			if(a>999){
+				document.write("지폐");
+			}else if(a>9){
+				document.write("동전");
+			}else{
+				document.write("장난감");
+			}
+			document.write(a);
+			document.write('</br>');
+
+			a=parseInt('$20000');
+			if(a>999){
+				document.write("지폐");
+			}else if(a>9){
+				document.write("동전");
+			}else{
+				document.write("장난감");
+			}
+			document.write(a);
+
+			var b=200;
+			
+			 //조건문 switch
+	        var i='한글';
+	        // ==
+	        switch(i){
+	            case '영어':
+	                document.write("영어임");
+	                break;
+	            case '중국어':
+	                document.write("중국어임");
+	                break;
+	            case '한글':
+	                document.write("한글임");
+	                break;
+	            default:
+	                document.write("알 수 없는 언어");
+	                break;
+	        }
+
+			/*// 조건문 switch
+				case 300:
+					document.write("300이다.");
+					break;
+				case 200:
+					document.write("200이다.");
+					break;
+				case 100;
+					document.write("100이다.");
+					break;
+				default:
+					document.write("아무것도 아니다");
+					}*/
+
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>		

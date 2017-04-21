@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Page Title</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<style></style>
+	<script typte="text/javascript"></script>
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+	<script src="js/jquery.bxslider.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//json방식 옵션 설정
+		var env = {
+			/////////////////////
+			auto: true,
+			autoControls: true,
+			autoStart: false,
+			/////////////////////
+			maxSlides: 3,
+			minSlides: 1,
+			moveSlides: 1,
+			slideWidth: 300,
+			slideMargin: 0,
+			/////////////////////
+			prevText: '이전',
+			nextText: '다음',
+			/////////////////////
+			hideControlOnEnd: true,
+			/////////////////////
+			easing: 'ease-out',
+			speed: 1000,
+			////////////////////
+			captions: false,
+			controls: true
+			//mode: 'fade'
+		};
+		var carousel = {
+			maxSlides: 3,
+			minSlides: 2,
+			moveSlides: 1,
+			slideWidth: 300
+		};
+		$('document').ready(function() {
+			$('.slider').bxSlider(env);
+		}); //ready end
+
+	</script>
+	<style>
+		.bx-caption {
+			position: absolute;
+			top: 200px;
+		}
+		
+		.bx-caption>span {
+			background-color: white;
+		}
+		
+		.bx-controls-direction {
+			position: absolute;
+			top: 150px;
+		}
+		
+		.bx-wrapper {
+			position: relative;
+		}
+		
+		.bx-controls-direction>a {
+			width: 50px;
+			height: 50px;
+			display: inline-block;
+			text-indent: -9999px;
+		}
+		
+		.bx-controls-direction>a:first-child {
+			background-image: url(imgs/arrow-l.jpg);
+			background-size: 100%;
+		}
+		
+		.bx-controls-direction>a:first-child {
+			background-image: url(imgs/arrow-r.jpg);
+			background-size: 100%;
+			left: 920px;
+		}
+		
+		.bx-pager-item {
+			display: inline-block;
+			margin: 0 50px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="header">한빛교육센터</div>
+	<div id="menu">
+		<a href="#">menu1</a>
+		<a href="#">menu2</a>
+		<a href="#">menu3</a>
+		<a href="#">menu4</a>
+		<div id="content">
+			<ul class="slider">
+				<li><img src="imgs/big01.jpg" alt="" title="big01"></li>
+				<li><img src="imgs/big02.jpg" alt="" title="big02"></li>
+				<li><img src="imgs/big03.jpg" alt="" title="big03"></li>
+				<li><img src="imgs/big04.jpg" alt="" title="big04"></li>
+				<li><img src="imgs/big05.jpg" alt="" title="big05"></li>
+				<li><img src="imgs/big06.jpg" alt="" title="big06"></li>
+				<li><img src="imgs/big07.jpg" alt="" title="big07"></li>
+				<li><img src="imgs/big08.jpg" alt="" title="big08"></li>
+			</ul>
+		</div>
+		<div id="footer">
+			<p>한빛교육센터</p>
+		</div>
+	</div>
+</body>
+
+</html>

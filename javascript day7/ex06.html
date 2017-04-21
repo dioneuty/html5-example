@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>page title</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<script lang="javascript">
+			document.write('원주율: ',Math.PI,'</br>');
+			document.write('절대값: ',Math.abs(-100),'</br>');
+			document.write('반올림: ',Math.round(3.5),'</br>');
+			document.write('반올림: ',Math.round((3.5555*100)/100),'</br>');
+			document.write('내림: ',Math.floor(3.8),'</br>');
+			document.write('반올림: ',Math.round(3.94+0.4),'</br>');
+			document.write('랜덤수자: ',Math.random(),'</br>');
+
+			document.write('최대값',Math.max(3,10,2,78),'</br>');
+			document.write('최대값',Math.min(3,10,2,78),'</br>');
+
+			// 로또 프로그램 
+			var lotto=new Array();
+			var same=false;
+			for (var i = 0; i <6; i++) {
+				lotto[i]=Math.floor(Math.random()*45)+1;
+				for (var j = 0; j < i; j++) {
+					if(lotto[i]==lotto[j]){
+						same=true;
+						continue;
+					}
+				}
+				if(same==true){
+					i--;
+					continue;
+				}
+			}
+			document.write(lotto,'</br>');
+
+			for(var i=0; i<lotto.length; i++){
+				document.write("<img src='imgs/ball-"+lotto[i]+".png'/></br>")
+			}
+
+			
+
+
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>		

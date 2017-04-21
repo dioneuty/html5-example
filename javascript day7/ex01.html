@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>page title</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<script lang="javascript">
+		// alert에서는 개행이 되지만 html 상에서는 개행이 되지 않음.
+		// html에서는 <br/>태그를 써야 됨
+		document.write('개행여부: ', "'javascript\njavascript\njavascript\n");
+		//alert('javascript\njavascript\njavascript\n');
+		document.write('</br>');
+		var a = "100원";
+		//is-Not-a-Number
+		document.write('isNaN인가? ', isNaN(a * 2), '</br>');
+		//isNaN:연산할 수 없는 타입
+
+		//조건문: 숫자가 아니라면 숫자로 변환시켜 다시 계산한다.
+		if (isNaN(a * 2)) {
+			a = parseInt(a);
+		}
+		document.write('숫자로 변환 후 다시 계산: ', a * 2, '</br>');
+		///////////////////////////////////////////////////
+
+		document.write('랜덤값: ', Math.random(), '</br>');
+
+		document.write(a * 10, '</br>');
+
+		document.write()
+		//형변환
+		document.write('숫자형으로 변환 ', Number('100') + 200, '</br>');
+		document.write('문자형으로 변환 ', String(100) + 100, '</br>');
+
+		//배열
+		var arr = [1, 'a', 1234];
+
+		document.write(arr.toString(), '</br>');
+		document.write(arr.valueOf([3]), '</br>');
+		//document.write(arr.Join('b'),'</br>');
+
+		//비교연산자
+		// == : value 값이 서로 같은가?
+		// === : value 값이 서로 같은가? and 자료타입이 서로 같은가?
+
+		document.write(100 == '100', '</br>');
+		document.write(100 === '100', '</br>');
+
+		//인스턴스 여부
+		var fe = 3380;
+		var e = new String();
+		var b = '3232';
+
+		document.write(fe instanceof Number, '</br>');
+		document.write(e instanceof String, '</br>');
+		document.write(b instanceof String, '</br>');
+
+		var fn = {
+			a: 23
+		};
+		document.write(a in fn);
+
+		/* 
+		foreach(for in, 개선된 루프문)
+		java:
+		for(JavaBean bean:list){}
+			
+		javascript:
+		for(bean in list){}
+		*/
+
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

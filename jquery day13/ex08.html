@@ -1,0 +1,59 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Page Title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+        <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                
+                //.empty() 태그 내용을 비움
+                //$('h1').text("");
+                $('h1').empty();
+                //.remove() 태그 자체를 삭제
+                //$('h1').remove();
+                
+                console.log( $('body').html());
+                
+                var lis=$('ul').html();
+                lis+='<li>목록5</li>';
+                $('ul').html(lis);
+                
+                //자식요소 child
+                
+                //.append() 자식 요소의 마지막 부분에 태그 자체를 추가
+                $('ul').append('<li>append-add6</li>');
+                //.prepend() 자식 요소의 첫 부분에 태그 자체를 추가
+                $('ul').prepend('<li>prepend-padd1</li>');
+                
+                //().appendTo(), 없으면 만들고 있으면 옮기기
+                $('<li>7add-appendTo</li>').appendTo('ul');
+                //().prependTo(), 없으면 만들고 있으면 옮기
+                $('<li>1add-prependTo</li>').prependTo('ul');
+                
+                //형제요소 sibling
+                
+                //$().after()
+                $('li:eq(3)').after('<li>added2.5</li>');
+                //$().before()
+                $('li:eq(3)').before('<li>added1.5</li>');
+                
+                //insertAfter, insertBefore
+                $('<li>insertAfter[1]</li>').insertAfter('li:eq(1)');
+                $('<li>insertBefore[1]</li>').insertBefore('li:eq(1)');
+            };
+    </script>
+	</head>
+	<body>
+        <h1>ex08</h1>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+        </ul>
+        <p>내용</p>
+	</body>
+</html>
